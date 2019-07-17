@@ -1,0 +1,92 @@
+<h2 id="linux安装">Linux安装</h2>
+
+<ul>
+  <li>
+    <p>1.ubuntu官网下载镜像,18.04LTS版本</p>
+  </li>
+  <li>
+    <p>2.安装easybcd</p>
+
+    <ul>
+      <li>选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。</li>
+    </ul>
+  </li>
+  <li>
+    <p>然后点击配置，将menu.lst文件的内容替换成一下文本：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title Install Ubuntu
+root (hd0,0)
+kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-amd64.iso locale=zh_CN.UTF-8
+initrd (hd0,0)/initrd.lz
+title reboot
+reboot
+title halt
+halt
+</code></pre></div>    </div>
+
+    <ul>
+      <li>接下来把系统镜像文件用DAEMON tools打开，或者以压缩包形式将其中两个文件解压出来，分别是initrd.lz和vmlinuz.efi，这两个文件在casper文件夹里,放c盘根目录</li>
+      <li>重启电脑</li>
+    </ul>
+  </li>
+  <li>
+    <p>3.安装ubuntu</p>
+  </li>
+  <li>
+    <p>4.更改国内apt源</p>
+
+    <ul>
+      <li>https://www.cnblogs.com/dream4567/p/9690850.html</li>
+    </ul>
+  </li>
+  <li>
+    <p>5.安装vim</p>
+
+    <ul>
+      <li>apt-get install vim</li>
+    </ul>
+  </li>
+  <li>
+    <p>6.安装git</p>
+
+    <ul>
+      <li>apt-get install git</li>
+    </ul>
+  </li>
+  <li>
+    <p>7.安装chrome浏览器</p>
+
+    <ul>
+      <li>apt-get install chromium-browser</li>
+    </ul>
+  </li>
+  <li>
+    <p>8.安装tpyro</p>
+
+    <ul>
+      <li>tpyro的apt源无法使用中文输入法,使用https://www.typora.io/下载</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2github个人主页">2.github个人主页</h3>
+
+<ul>
+  <li>1.申请个人账号</li>
+  <li>2.开通username.github.io仓库</li>
+  <li>3.编写主页内容
+    <ul>
+      <li>git clone https://github.com/username/username.github.io</li>
+      <li>vim index.html</li>
+      <li>git add –all</li>
+      <li>git commit -m “..”</li>
+      <li>git push -u origin master</li>
+    </ul>
+  </li>
+  <li>4.访问username.github.io</li>
+</ul>
+
+<p>​</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
