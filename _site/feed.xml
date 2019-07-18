@@ -5,9 +5,60 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jul 2019 11:18:42 +0800</pubDate>
-    <lastBuildDate>Thu, 18 Jul 2019 11:18:42 +0800</lastBuildDate>
+    <pubDate>Thu, 18 Jul 2019 13:44:35 +0800</pubDate>
+    <lastBuildDate>Thu, 18 Jul 2019 13:44:35 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Git 相关技术</title>
+        <description>&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    初始化
+
+    &lt;ul&gt;
+      &lt;li&gt;$git init&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    配置(config)
+
+    &lt;ul&gt;
+      &lt;li&gt;git config –global user.email 邮箱&lt;/li&gt;
+      &lt;li&gt;git config –global user.name 用户名&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    帮助(help)
+
+    &lt;ul&gt;
+      &lt;li&gt;$ git help&lt;/li&gt;
+      &lt;li&gt;$ git help add&lt;/li&gt;
+      &lt;li&gt;$ git add –help&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    忽略文件(ignore)
+
+    &lt;ul&gt;
+      &lt;li&gt;$ echo”temp/” » .gitignore&lt;/li&gt;
+      &lt;li&gt;$ echo”private_key” » .gitignore&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 17 Jul 2019 23:06:05 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+        
+        <category>git</category>
+        
+        
+        <category>git</category>
+        
+      </item>
     
       <item>
         <title>Linux 相关技术</title>
@@ -26,59 +77,6 @@
   &lt;/li&gt;
   &lt;li&gt;
     然后点击配置，将menu.lst文件的内容替换成一下文本：
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title Install Ubuntu
-root (hd0,0)
-kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-amd64.iso locale=zh_CN.UTF-8
-initrd (hd0,0)/initrd.lz
-title reboot
-reboot
-title halt
-halt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;接下来把系统镜像文件用DAEMON tools打开，或者以压缩包形式将其中两个文件解压出来，分别是initrd.lz和vmlinuz.efi，这两个文件在casper文件夹里,放c盘根目录&lt;/li&gt;
-      &lt;li&gt;重启电脑&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    3.安装ubuntu
-  &lt;/li&gt;
-  &lt;li&gt;
-    4.更改国内apt源
-
-    &lt;ul&gt;
-      &lt;li&gt;https://www.cnblogs.com/dream4567/p/9690850.html&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    5.安装vim
-
-    &lt;ul&gt;
-      &lt;li&gt;apt-get install vim&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    6.安装git
-
-    &lt;ul&gt;
-      &lt;li&gt;apt-get install git&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    7.安装chrome浏览器
-
-    &lt;ul&gt;
-      &lt;li&gt;apt-get install chromium-browser&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    8.安装tpyro
-
-    &lt;ul&gt;
-      &lt;li&gt;tpyro的apt源无法使用中文输入法,使用https://www.typora.io/下载&lt;/li&gt;
-    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 

@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Linux 相关技术</title>
-    <meta name="description" content="Linux安装      1.ubuntu官网下载镜像,18.04LTS版本        2.安装easybcd          选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。            然后点击配置，将menu.lst文件的内容替换成一下文本：  ">
+    <title>Git 相关技术</title>
+    <meta name="description" content="git      初始化          $git init            配置(config)          git config –global user.email 邮箱      git config –global user.name 用户名            帮助(help)    ...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">
+    <link rel="canonical" href="http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
     <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
 
 
@@ -86,7 +86,7 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Linux 相关技术</h1>
+        <h1>Git 相关技术</h1>
         <div class="label">
 
             <div class="label-card">
@@ -110,7 +110,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Ubuntu" title="Category: Ubuntu" rel="category">Ubuntu</a>
+        <a href="/category/#git" title="Category: git" rel="category">git</a>
     
   
 
@@ -127,11 +127,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#Ubuntu" title="Tag: Ubuntu" rel="tag">Ubuntu</a-->
-        <a href="/tag/#Ubuntu" title="Tag: Ubuntu" rel="tag">Ubuntu</a>&nbsp;
-    
-        <!--a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a-->
-        <a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a>
+        <!--a href="/tag/#git" title="Tag: git" rel="tag">git</a-->
+        <a href="/tag/#git" title="Tag: git" rel="tag">git</a>
     
   
 
@@ -142,157 +139,200 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 id="linux安装">Linux安装</h2>
+        <h2 id="git">git</h2>
 
 <ul>
   <li>
-    <p>1.ubuntu官网下载镜像,18.04LTS版本</p>
-  </li>
-  <li>
-    <p>2.安装easybcd</p>
+    <p>初始化</p>
 
     <ul>
-      <li>选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。</li>
+      <li>$git init</li>
     </ul>
   </li>
   <li>
-    <p>然后点击配置，将menu.lst文件的内容替换成一下文本：</p>
-
-    <p>~~~</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>title Install Ubuntu
-root (hd0,0)
-kernel (hd0,0)/vmlinuz.efi boot=casper iso-scan/filename=/ubuntu-14.04-desktop-amd64.iso locale=zh_CN.UTF-8
-initrd (hd0,0)/initrd.lz
-title reboot
-reboot
-title halt
-halt
-</code></pre></div>    </div>
+    <p>配置(config)</p>
 
     <ul>
-      <li>接下来把系统镜像文件用DAEMON tools打开，或者以压缩包形式将其中两个文件解压出来，分别是initrd.lz和vmlinuz.efi，这两个文件在casper文件夹里,放c盘根目录</li>
-      <li>重启电脑</li>
+      <li>git config –global user.email 邮箱</li>
+      <li>git config –global user.name 用户名</li>
     </ul>
   </li>
   <li>
-    <p>3.安装ubuntu</p>
-  </li>
-  <li>
-    <p>4.更改国内apt源</p>
+    <p>帮助(help)</p>
 
     <ul>
-      <li>https://www.cnblogs.com/dream4567/p/9690850.html</li>
+      <li>$ git help</li>
+      <li>$ git help add</li>
+      <li>$ git add –help</li>
     </ul>
   </li>
   <li>
-    <p>5.安装vim</p>
+    <p>忽略文件(ignore)</p>
 
     <ul>
-      <li>apt-get install vim</li>
+      <li>$ echo”temp/” » .gitignore</li>
+      <li>$ echo”private_key” » .gitignore
+~~~</li>
     </ul>
   </li>
   <li>
-    <p>6.安装git</p>
+    <p>状态(status)</p>
+
+    <p>​	显示当前工作区与暂存区（Index）的粗略状态。</p>
+
+    <p>​	# 显示某些文件已修改，哪些文件已准备提交等信息</p>
 
     <ul>
-      <li>apt-get install git</li>
+      <li>$git status</li>
     </ul>
   </li>
   <li>
-    <p>7.安装chrome浏览器</p>
+    <p>添加(add)</p>
+
+    <p>将文件加入缓存区</p>
+
+    <p># 添加文件</p>
 
     <ul>
-      <li>apt-get install chromium-browser</li>
+      <li>$ git add HelloWorld.java</li>
+    </ul>
+
+    <p># 添加子目录下的文件</p>
+
+    <ul>
+      <li>$ git add /path/to/file/HelloWorld.c</li>
+    </ul>
+
+    <p># 通配符方式添加多个文件</p>
+
+    <ul>
+      <li>$ git add ./*.java</li>
+    </ul>
+
+    <p># 添加工作目录下的所有文件</p>
+
+    <ul>
+      <li>$ git add -A</li>
     </ul>
   </li>
   <li>
-    <p>8.安装tpyro</p>
+    <p>分支(branch)</p>
+
+    <p>该命令用于管理分支。可以查看，修改，创建，删除分支。、</p>
+
+    <p># 列出所有本质</p>
 
     <ul>
-      <li>tpyro的apt源无法使用中文输入法,使用https://www.typora.io/下载</li>
+      <li>$ git branch -a</li>
+    </ul>
+
+    <p># 创建新分支</p>
+
+    <ul>
+      <li>$ git branch myNewBranch</li>
+    </ul>
+
+    <p># 删除分支</p>
+
+    <ul>
+      <li>$ git branch -d myBranch</li>
+    </ul>
+
+    <p># 重命名分支： git branch -m <oldname> <newname></newname></oldname></p>
+
+    <ul>
+      <li>$ git branch -m myBranchName myNewBranchName</li>
+    </ul>
+
+    <p># 修改分支描述</p>
+
+    <ul>
+      <li>$ git branch myBranchName –edit-description</li>
+    </ul>
+  </li>
+  <li>
+    <p>提交（commit)</p>
+
+    <p>将缓存区（Index）中的内容提交到git仓库中</p>
+
+    <p># 提交时填写说明(message)</p>
+
+    <ul>
+      <li>$ git commit -m “Added multiplyNumbers() function to HelloWorld.c”</li>
+    </ul>
+
+    <p># 提交时带数字签名（由提交者的GPG密钥生成）</p>
+
+    <ul>
+      <li>$ git commit -S -m “signed commit message”</li>
+    </ul>
+
+    <p># 自动将修改的文件加入缓存区（Index），再进行提交。</p>
+
+    <ul>
+      <li>$ git commit -a -m “Modified foo.php and removed bar.php”</li>
+    </ul>
+
+    <p># 把本次提交与最后一次提交合并（删除最后一次提交，加入合并后的提交）</p>
+
+    <ul>
+      <li>$ git commit –amend -m “Correct message”</li>
+    </ul>
+  </li>
+  <li>
+    <p>差异（diff)</p>
+
+    <p>显示工作目录、缓存区（Index）、当前git库版本之间的差异</p>
+
+    <p># 显示工作目录与缓存区（Index）之间的差异</p>
+
+    <ul>
+      <li>$ git diff</li>
+    </ul>
+
+    <p># 显示缓存区（Index）与当前git库版本之间的差异</p>
+
+    <ul>
+      <li>$ git diff –cached</li>
+    </ul>
+
+    <p># 显示工作目录与当前git库版本之间的差异</p>
+
+    <ul>
+      <li>$ git diff HEAD</li>
+    </ul>
+  </li>
+  <li>
+    <p>日志(log)</p>
+
+    <p>显示提交到git仓库的记录信息.</p>
+
+    <p># 显示所有提交</p>
+
+    <ul>
+      <li>$ git log</li>
+    </ul>
+
+    <p># 以简化单行方式显示（每个提交）</p>
+
+    <ul>
+      <li>$ git log –oneline</li>
+    </ul>
+
+    <p># 只显示合并的提交</p>
+
+    <ul>
+      <li>$ git log –merges</li>
+    </ul>
+
+    <p># 在提交行的左侧以字符串图像的方式表示版本变化情况</p>
+
+    <ul>
+      <li>$ git log –graph</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="github个人主页">github个人主页</h3>
-
-<ul>
-  <li>1.申请个人账号</li>
-  <li>2.开通username.github.io仓库</li>
-  <li>3.编写主页内容
-    <ul>
-      <li>git clone https://github.com/username/username.github.io</li>
-      <li>vim index.html</li>
-      <li>git add –all</li>
-      <li>git commit -m “..”</li>
-      <li>git push -u origin master</li>
-    </ul>
-  </li>
-  <li>4.访问username.github.io</li>
-</ul>
-
-<h3 id="jekyllrb安装">Jekyllrb安装</h3>
-
-<ul>
-  <li>
-    <p>安装ruby</p>
-
-    <ul>
-      <li>apt-get install ruby ruby-dev</li>
-    </ul>
-  </li>
-  <li>
-    <p>安装依赖包</p>
-
-    <ul>
-      <li>
-        <p>apt-get install gcc g++ make</p>
-
-        <p>安装依赖,如果安装过程有xxx not found</p>
-
-        <p>就apt-get install xxx</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>安装jekyll</p>
-
-    <ul>
-      <li>gem install bundle  安装ruby的bundle</li>
-      <li>gem install jekyll  安装jekyll</li>
-    </ul>
-  </li>
-  <li>
-    <p>jekyll初始化新项目</p>
-
-    <ul>
-      <li>jekyll new blog</li>
-    </ul>
-  </li>
-  <li>
-    <p>启动测试</p>
-
-    <ul>
-      <li>jekyll server</li>
-    </ul>
-  </li>
-  <li>
-    <p>启动成功后更改_config.yml文件</p>
-  </li>
-  <li>
-    <p>添加md文件</p>
-
-    <ul>
-      <li>在_post中添加</li>
-      <li>格式 2019-07-17-title.md</li>
-    </ul>
-  </li>
-</ul>
-
-<p>​</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>
 
         </article>
         <hr>
@@ -304,6 +344,8 @@ halt
                 
                     
                 
+            
+                
                     
                 
             
@@ -313,11 +355,11 @@ halt
         <div class="post-recent">
     <div class="pre">
         
+        <p><strong>上一篇</strong> <a href="/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">Linux 相关技术</a></p>
+        
     </div>
     <div class="nex">
 
-        
-        <p><strong>下一篇</strong> <a href="/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Git 相关技术</a></p>
         
     </div>
 </div>
@@ -335,8 +377,8 @@ halt
      */
 
     var disqus_config = function() {
-        this.page.url = 'http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
