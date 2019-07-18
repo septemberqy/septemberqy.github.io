@@ -1,18 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-17T18:50:54+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">september</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Day1</title><link href="http://localhost:4000/2019/07/17/day1.html" rel="alternate" type="text/html" title="Day1" /><published>2019-07-17T00:00:00+08:00</published><updated>2019-07-17T00:00:00+08:00</updated><id>http://localhost:4000/2019/07/17/day1</id><content type="html" xml:base="http://localhost:4000/2019/07/17/day1.html">&lt;h2 id=&quot;linux安装&quot;&gt;Linux安装&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SeptemberQY</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 18 Jul 2019 11:18:42 +0800</pubDate>
+    <lastBuildDate>Thu, 18 Jul 2019 11:18:42 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Linux 相关技术</title>
+        <description>&lt;h2 id=&quot;linux安装&quot;&gt;Linux安装&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;1.ubuntu官网下载镜像,18.04LTS版本&lt;/p&gt;
+    1.ubuntu官网下载镜像,18.04LTS版本
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;2.安装easybcd&lt;/p&gt;
+    2.安装easybcd
 
     &lt;ul&gt;
       &lt;li&gt;选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;然后点击配置，将menu.lst文件的内容替换成一下文本：&lt;/p&gt;
+    然后点击配置，将menu.lst文件的内容替换成一下文本：
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title Install Ubuntu
 root (hd0,0)
@@ -30,38 +43,38 @@ halt
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;3.安装ubuntu&lt;/p&gt;
+    3.安装ubuntu
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;4.更改国内apt源&lt;/p&gt;
+    4.更改国内apt源
 
     &lt;ul&gt;
       &lt;li&gt;https://www.cnblogs.com/dream4567/p/9690850.html&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;5.安装vim&lt;/p&gt;
+    5.安装vim
 
     &lt;ul&gt;
       &lt;li&gt;apt-get install vim&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;6.安装git&lt;/p&gt;
+    6.安装git
 
     &lt;ul&gt;
       &lt;li&gt;apt-get install git&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;7.安装chrome浏览器&lt;/p&gt;
+    7.安装chrome浏览器
 
     &lt;ul&gt;
       &lt;li&gt;apt-get install chromium-browser&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;8.安装tpyro&lt;/p&gt;
+    8.安装tpyro
 
     &lt;ul&gt;
       &lt;li&gt;tpyro的apt源无法使用中文输入法,使用https://www.typora.io/下载&lt;/li&gt;
@@ -69,24 +82,19 @@ halt
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;2github个人主页&quot;&gt;2.github个人主页&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1.申请个人账号&lt;/li&gt;
-  &lt;li&gt;2.开通username.github.io仓库&lt;/li&gt;
-  &lt;li&gt;3.编写主页内容
-    &lt;ul&gt;
-      &lt;li&gt;git clone https://github.com/username/username.github.io&lt;/li&gt;
-      &lt;li&gt;vim index.html&lt;/li&gt;
-      &lt;li&gt;git add –all&lt;/li&gt;
-      &lt;li&gt;git commit -m “..”&lt;/li&gt;
-      &lt;li&gt;git push -u origin master&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;4.访问username.github.io&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;​&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Linux安装</summary></entry></feed>
+</description>
+        <pubDate>Wed, 17 Jul 2019 23:06:05 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/</guid>
+        
+        <category>Ubuntu</category>
+        
+        <category>Linux</category>
+        
+        
+        <category>Ubuntu</category>
+        
+      </item>
+    
+  </channel>
+</rss>

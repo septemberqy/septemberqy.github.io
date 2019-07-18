@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SeptemberQY</title>
-    <meta name="description" content="">
+    <title>Linux 相关技术</title>
+    <meta name="description" content="Linux安装      1.ubuntu官网下载镜像,18.04LTS版本        2.安装easybcd          选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。            然后点击配置，将menu.lst文件的内容替换成一下文本：    title Install ...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">
     <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
 
 
@@ -35,8 +35,8 @@
             <ul>
                 <li>
                     
-                    <a class="active" href="/">
-                        
+                    <a href="/">
+                    
                         <i class="fa fa-home"></i>Home
                     </a>
                 </li>
@@ -84,30 +84,25 @@
 </header>
 
 
-        <div class="page clearfix" index>
+        <div class="page clearfix" post>
     <div class="left">
-        <h1>Welcome to SeptemberQY's Blog!</h1>
-        <small>无fuck可说</small>
-        <hr>
-        <ul>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">Linux 相关技术</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2019-07-17
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
+        <h1>Linux 相关技术</h1>
+        <div class="label">
 
-                    <div class="label-card">
-                    
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2019-07-17
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
 
 
 <!-- <span class="point">•</span> -->
@@ -123,27 +118,31 @@
 </span>
 
 
-                    </div>
+            </div>
 
-                    <div class="label-card">
-                    
+            <div class="label-card">
+            
 <!-- <span class="point">•</span> -->
 <span class="pageTag">
   <i class="fa fa-tags"></i>
   
     
+        <!--a href="/tag/#Ubuntu" title="Tag: Ubuntu" rel="tag">Ubuntu</a-->
         <a href="/tag/#Ubuntu" title="Tag: Ubuntu" rel="tag">Ubuntu</a>&nbsp;
     
+        <!--a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a-->
         <a href="/tag/#Linux" title="Tag: Linux" rel="tag">Linux</a>
     
   
 
 </span>
 
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <h2 id="linux安装">Linux安装</h2>
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h2 id="linux安装">Linux安装</h2>
 
 <ul>
   <li>
@@ -214,111 +213,167 @@ halt
   </li>
 </ul>
 
+<h3 id="github个人主页">github个人主页</h3>
 
-                </div>
-                <div class="read-all">
-                    <a  href="/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-        </ul>
+<ul>
+  <li>1.申请个人账号</li>
+  <li>2.开通username.github.io仓库</li>
+  <li>3.编写主页内容
+    <ul>
+      <li>git clone https://github.com/username/username.github.io</li>
+      <li>vim index.html</li>
+      <li>git add –all</li>
+      <li>git commit -m “..”</li>
+      <li>git push -u origin master</li>
+    </ul>
+  </li>
+  <li>4.访问username.github.io</li>
+</ul>
 
+<h3 id="jekyllrb安装">Jekyllrb安装</h3>
 
+<ul>
+  <li>
+    <p>安装ruby</p>
 
-        <!-- Pagination links -->
-        <div class="pagination">
-          
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
-          
-          <span class="page_number ">1/1</span>
-          
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
-          
-        </div>
+    <ul>
+      <li>apt-get install ruby ruby-dev</li>
+    </ul>
+  </li>
+  <li>
+    <p>安装依赖包</p>
+
+    <ul>
+      <li>
+        <p>apt-get install gcc g++ make</p>
+
+        <p>安装依赖,如果安装过程有xxx not found</p>
+
+        <p>就apt-get install xxx</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>安装jekyll</p>
+
+    <ul>
+      <li>gem install bundle  安装ruby的bundle</li>
+      <li>gem install jekyll  安装jekyll</li>
+    </ul>
+  </li>
+  <li>
+    <p>jekyll初始化新项目</p>
+
+    <ul>
+      <li>jekyll new blog</li>
+    </ul>
+  </li>
+  <li>
+    <p>启动测试</p>
+
+    <ul>
+      <li>jekyll server</li>
+    </ul>
+  </li>
+  <li>
+    <p>启动成功后更改_config.yml文件</p>
+  </li>
+  <li>
+    <p>添加md文件</p>
+
+    <ul>
+      <li>在_post中添加</li>
+      <li>格式 2019-07-17-title.md</li>
+    </ul>
+  </li>
+</ul>
+
+<p>​</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+        </article>
+        <hr>
+
+        
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
     </div>
-    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//septemberqy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
         <div class="wrap">
-            <div class="side">
-                <div>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    Recent Posts
-                </div>
-                <ul class="content-ul" recent>
-                    
-                        <li><a href="/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">Linux 相关技术</a></li>
-                    
-                </ul>
-            </div>
 
             <!-- Content -->
-            <div class="side ">
+            <div class="side content">
                 <div>
-                    <i class="fa fa-th-list"></i>
-                    Categories
+                    Content
                 </div>
-                <ul class="content-ul" cate>
+                <ul id="content-side" class="content-ul">
                     
-                    <li>
-                        <a href="/category/#Ubuntu" class="categories-list-item" cate="Ubuntu">
-                            <span class="name">
-                                Ubuntu
-                            </span>
-                            <span class="badge">1</span>
-                        </a>
-                    </li>
-                    
+                    <li><a href="#comments">Comments</a></li>
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
-            <div class="side">
-                <div>
-                    <i class="fa fa-tags"></i>
-                    Tags
-                </div>
-                <div class="tags-cloud">
-                    
-                    
-                    
-                    
-
-                    
-
-                    
-                      
-                      
-                      
-                      
-                      
-                      <a href="/tag/#Ubuntu" style="font-size: 9pt; color: #999;">Ubuntu</a>
-                    
-                      
-                      
-                      
-                      
-                      
-                      <a href="/tag/#Linux" style="font-size: 9pt; color: #999;">Linux</a>
-                    
-                </div>
-            </div>
-
-            <!-- <div class="side">
-                <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
-                </div>
-                <ul  class="content-ul">
-
-                </ul>
-            </div> -->
+            <!-- <div class="side">bbbb</div> -->
         </div>
     </div>
 </div>
-<!-- <script src="/js/scroll.min.js " charset="utf-8"></script> -->
-<!-- <script src="/js/pageContent.js " charset="utf-8"></script> -->
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
 
 
     <footer class="site-footer">
