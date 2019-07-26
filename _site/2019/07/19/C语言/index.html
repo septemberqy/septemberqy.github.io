@@ -1,0 +1,137 @@
+<h2 id="c语言">C语言</h2>
+
+<h3 id="一概论">一.概论</h3>
+
+<h4 id="1c语言是什么">1.C语言是什么</h4>
+
+<p>​	c语言是一种通用的,过程式的编成语言,广泛用于系统与应用软件的开发</p>
+
+<p>​	人类与计算机交流的语言</p>
+
+<h4 id="2c语言特点">2.C语言特点</h4>
+
+<ul>
+  <li>简单</li>
+  <li>快速</li>
+  <li>高性能</li>
+  <li>兼容性好</li>
+  <li>易于学习</li>
+  <li>功能强大</li>
+</ul>
+
+<h4 id="3c语言最适合做什么">3.C语言最适合做什么</h4>
+
+<ul>
+  <li>linux嵌入式
+    <ul>
+      <li>小巧</li>
+      <li>灵活</li>
+      <li>适合做小工具</li>
+    </ul>
+  </li>
+  <li>硬件编程</li>
+  <li>高性能软件</li>
+</ul>
+
+<h3 id="二第一个程序">二.第一个程序</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"hello word!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>$gcc a.c</p>
+
+<h3 id="三多个源文件">三.多个源文件</h3>
+
+<p>max.c</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">max</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+                <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>hello.c</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include "max.c"
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a1</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">a2</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">maxNum</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"the max value is %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">maxNum</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>$gcc hello.c -o main.out</p>
+
+<h3 id="4头文件与函数分离">4.头文件与函数分离</h3>
+
+<p>max.c</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">max</span> <span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+                <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>max.h</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>hello.c</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include "max.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a1</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">a2</span> <span class="o">=</span> <span class="mi">21</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">maxNum</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"the max value is %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">maxNum</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>$gcc max.o hello.c</p>
+
+<h4 id="5makefile">5.Makefile</h4>
+
+<p>Makefile</p>
+
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">hello.out</span><span class="o">:</span><span class="nf">max.o min.o hello.c</span>
+        <span class="err">gcc</span> <span class="err">max.o</span> <span class="err">min.o</span> <span class="err">hello.c</span> <span class="err">-o</span> <span class="err">hello.out</span>
+<span class="nl">max.o</span><span class="o">:</span><span class="nf">max.c</span>
+        <span class="err">gcc</span> <span class="err">-c</span> <span class="err">max.c</span>
+<span class="nl">min.o</span><span class="o">:</span><span class="nf">min.c</span>
+        <span class="err">gcc</span> <span class="err">-c</span> <span class="err">min.c</span>
+
+</code></pre></div></div>
+
+<p>$make</p>

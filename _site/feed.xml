@@ -5,92 +5,345 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jul 2019 14:00:46 +0800</pubDate>
-    <lastBuildDate>Thu, 18 Jul 2019 14:00:46 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Jul 2019 20:04:43 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Jul 2019 20:04:43 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title>Git 相关技术</title>
-        <description>&lt;h2 id=&quot;git&quot;&gt;git&lt;/h2&gt;
+        <title>20190723日志</title>
+        <description>&lt;h3 id=&quot;20190723&quot;&gt;20190723&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    初始化
-
-    &lt;ul&gt;
-      &lt;li&gt;$git init&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    配置(config)
-
-    &lt;ul&gt;
-      &lt;li&gt;git config –global user.email 邮箱&lt;/li&gt;
-      &lt;li&gt;git config –global user.name 用户名&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    帮助(help)
-
-    &lt;ul&gt;
-      &lt;li&gt;$ git help&lt;/li&gt;
-      &lt;li&gt;$ git help add&lt;/li&gt;
-      &lt;li&gt;$ git add –help&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    忽略文件(ignore)
-
-    &lt;ul&gt;
-      &lt;li&gt;$ echo”temp/” » .gitignore&lt;/li&gt;
-      &lt;li&gt;$ echo”private_key” » .gitignore&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;添加聊天室进入退出通知&lt;/li&gt;
+  &lt;li&gt;js打印图形&lt;/li&gt;
+&lt;/ol&gt;
 
 </description>
-        <pubDate>Wed, 17 Jul 2019 23:06:05 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+        <pubDate>Wed, 24 Jul 2019 04:13:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/24/20190723/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/24/20190723/</guid>
         
-        <category>git</category>
+        <category>日志</category>
         
         
-        <category>git</category>
+        <category>日志</category>
         
       </item>
     
       <item>
-        <title>Linux 相关技术</title>
-        <description>&lt;h2 id=&quot;linux安装&quot;&gt;Linux安装&lt;/h2&gt;
+        <title>nodejs学习笔记</title>
+        <description>&lt;h2 id=&quot;nodejs笔记篇&quot;&gt;Nodejs笔记篇&lt;/h2&gt;
+
+&lt;h3 id=&quot;1关于-nodejs&quot;&gt;1.关于 Node.js&lt;/h3&gt;
+
+​	Node.js是一个让JavaScript运行在服务器端的开发平台.
+
+&lt;h4 id=&quot;11-介绍&quot;&gt;1.1 介绍&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    node.js 不是一种独立的语言,与PHP,JSP,PYTHON,PERL,RUBY的既是语言，也是平台不同,node.js使用javascript进行编成,运行在javascript引擎上(V8)
+  &lt;/li&gt;
+  &lt;li&gt;
+    与PHP,JSP等相比，Nodejs跳过了Apache,Nginx,ISS等HTTP服务器,它自己不用建设在任何服务器软件之上.nodejs的许多谁就理念与经典架构LANP有着很大的不同,可以提供强大的伸缩能力
+
+    linux apache/nginx mysql php
+
+    linux nodejs mongodb mysql nodejs本身就是服务器  js作为后端语言
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Wed, 24 Jul 2019 01:20:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/</guid>
+        
+        <category>nodejs</category>
+        
+        
+        <category>nodejs</category>
+        
+      </item>
+    
+      <item>
+        <title>20190722日志</title>
+        <description>&lt;h3 id=&quot;20190722&quot;&gt;20190722&lt;/h3&gt;
+
+&lt;h3 id=&quot;1nodejs聊天室服务器端客户端&quot;&gt;1.nodejs聊天室服务器端,客户端&lt;/h3&gt;
+
+&lt;h3 id=&quot;2准备技术分享相关内容&quot;&gt;2.准备技术分享相关内容&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装LNMP环境&lt;/li&gt;
+  &lt;li&gt;安装ruby环境&lt;/li&gt;
+  &lt;li&gt;查找相关资料&lt;/li&gt;
+  &lt;li&gt;准备PPT&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 23 Jul 2019 03:57:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/23/20190722%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/23/20190722%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title>nodejs聊天室</title>
+        <description>&lt;h2 id=&quot;nodejs聊天室&quot;&gt;NODEJS聊天室&lt;/h2&gt;
+
+&lt;h4 id=&quot;1切换国内源&quot;&gt;1.切换国内源&lt;/h4&gt;
+
+​	npm install -g cnpm –registry=&lt;a href=&quot;https://link.jianshu.com/?t=https://registry.npm.taobao.org&quot;&gt;https://registry.npm.taobao.org&lt;/a&gt;
+
+&lt;h4 id=&quot;2安装需要软件包&quot;&gt;2.安装需要软件包&lt;/h4&gt;
+
+​	这里需要安装2个软件包
+
+&lt;ul&gt;
+  &lt;li&gt;cnpm install socket.io&lt;/li&gt;
+  &lt;li&gt;cnpm install express&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 23 Jul 2019 03:54:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/23/nodejs%E8%81%8A%E5%A4%A9%E5%AE%A4/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/23/nodejs%E8%81%8A%E5%A4%A9%E5%AE%A4/</guid>
+        
+        <category>nodejs</category>
+        
+        
+        <category>nodejs</category>
+        
+      </item>
+    
+      <item>
+        <title>20190721日志</title>
+        <description>&lt;h2 id=&quot;20190721&quot;&gt;20190721&lt;/h2&gt;
+
+&lt;h3 id=&quot;nodejs&quot;&gt;nodejs&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    搭建基于net的server和client的聊天室
+  &lt;/li&gt;
+  &lt;li&gt;
+    用npm安装socket.io插件
+  &lt;/li&gt;
+  &lt;li&gt;
+    搭建基于socket.io的server和client的聊天室
+  &lt;/li&gt;
+  &lt;li&gt;
+    使用express搭建聊天室路由功能
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Mon, 22 Jul 2019 03:42:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/22/20190721%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/22/20190721%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title>日志</title>
+        <description>&lt;h3 id=&quot;20190719&quot;&gt;20190719&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;processon幕布c语言&quot;&gt;processOn,幕布,C语言&lt;/h3&gt;
+
+1.更改jekyll博客项目
+
+2.使用processOn制作聊天室流程图
+
+3.使用幕布写tcp/ip导图
+
+4.学习C语言
+
+</description>
+        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/19/%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/19/%E6%97%A5%E5%BF%97/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>C语言</title>
+        <description>&lt;h2 id=&quot;c语言&quot;&gt;C语言&lt;/h2&gt;
+
+&lt;h3 id=&quot;一概论&quot;&gt;一.概论&lt;/h3&gt;
+
+&lt;h4 id=&quot;1c语言是什么&quot;&gt;1.C语言是什么&lt;/h4&gt;
+
+​	c语言是一种通用的,过程式的编成语言,广泛用于系统与应用软件的开发
+
+​	人类与计算机交流的语言
+
+&lt;h4 id=&quot;2c语言特点&quot;&gt;2.C语言特点&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简单&lt;/li&gt;
+  &lt;li&gt;快速&lt;/li&gt;
+  &lt;li&gt;高性能&lt;/li&gt;
+  &lt;li&gt;兼容性好&lt;/li&gt;
+  &lt;li&gt;易于学习&lt;/li&gt;
+  &lt;li&gt;功能强大&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3c语言最适合做什么&quot;&gt;3.C语言最适合做什么&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;linux嵌入式
+    &lt;ul&gt;
+      &lt;li&gt;小巧&lt;/li&gt;
+      &lt;li&gt;灵活&lt;/li&gt;
+      &lt;li&gt;适合做小工具&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;硬件编程&lt;/li&gt;
+  &lt;li&gt;高性能软件&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/19/C%E8%AF%AD%E8%A8%80/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/19/C%E8%AF%AD%E8%A8%80/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>C指针</title>
+        <description>&lt;h2 id=&quot;c指针&quot;&gt;C指针&lt;/h2&gt;
+
+&lt;h3 id=&quot;1初始指针&quot;&gt;1.初始指针&lt;/h3&gt;
+
+main.c
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num a=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;num b=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/19/C%E6%8C%87%E9%92%88/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/19/C%E6%8C%87%E9%92%88/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>20190719日志</title>
+        <description>&lt;h2 id=&quot;20190719&quot;&gt;20190719&lt;/h2&gt;
+
+&lt;h2 id=&quot;c语言&quot;&gt;C语言&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    了解C语言基础语法
+  &lt;/li&gt;
+  &lt;li&gt;
+    了解C语言编译与make语法
+  &lt;/li&gt;
+  &lt;li&gt;
+    了解C语言指针
+  &lt;/li&gt;
+  &lt;li&gt;
+    使用gdb追踪C语言内存变化
+  &lt;/li&gt;
+  &lt;li&gt;
+    安装node环境
+
+    tar zxvf node-v10.16.0.tar.gz
+
+    cd node-v10.16.0
+
+    configure –prefix=/usr/local/node
+
+    make &amp;amp;&amp;amp; make install
+  &lt;/li&gt;
+  &lt;li&gt;
+    测试node http模块
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/19/20190719%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/19/20190719%E6%97%A5%E5%BF%97/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown 相关技术</title>
+        <description>&lt;h2 id=&quot;markdown&quot;&gt;markdown&lt;/h2&gt;
+
+&lt;h3 id=&quot;1标题&quot;&gt;1.标题&lt;/h3&gt;
+
+​	# 一级标题
+
+​	## 二级标题
+
+&lt;h3 id=&quot;2字体&quot;&gt;2.字体&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    1.ubuntu官网下载镜像,18.04LTS版本
-  &lt;/li&gt;
-  &lt;li&gt;
-    2.安装easybcd
+    倾斜
 
-    &lt;ul&gt;
-      &lt;li&gt;选择“添加新条目”，然后选择“NeoGrub”，点击“安装”。&lt;/li&gt;
-    &lt;/ul&gt;
+    前后加1个*
+
+    *字体*
   &lt;/li&gt;
   &lt;li&gt;
-    然后点击配置，将menu.lst文件的内容替换成一下文本：
+    加粗
+
+    前后加2个*
+
+    **加粗字体**
+  &lt;/li&gt;
+  &lt;li&gt;
+    加粗倾斜
+
+    前后3个*
+
+    ****加粗倾斜***
   &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Wed, 17 Jul 2019 23:06:05 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/</guid>
+        <pubDate>Thu, 18 Jul 2019 23:06:05 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
         
-        <category>Ubuntu</category>
-        
-        <category>Linux</category>
+        <category>markdown</category>
         
         
-        <category>Ubuntu</category>
+        <category>Markdown</category>
         
       </item>
     

@@ -1,0 +1,235 @@
+<h2 id="c指针">C指针</h2>
+
+<h3 id="1初始指针">1.初始指针</h3>
+
+<p>main.c</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+        <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+        <span class="n">change</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"num a=%d</span><span class="se">\n</span><span class="s">num b=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>&amp;a  传递内存地址</p>
+
+<h3 id="2gdb工具">2.gdb工具</h3>
+
+<ol>
+  <li>
+    <p>要使用gdb工具调试c程序,需要在编译时加入-g参数</p>
+
+    <p>gcc -g main.c -o main.out</p>
+  </li>
+  <li>
+    <p>gdb ./main.out</p>
+  </li>
+  <li>
+    <p>l查看源代码</p>
+
+    <p>回车继续</p>
+  </li>
+  <li>
+    <p>start开始调试</p>
+  </li>
+  <li>
+    <p>n下一行</p>
+
+    <p>先显示,后执行</p>
+  </li>
+  <li>
+    <p>p a</p>
+
+    <p>打印a变量</p>
+  </li>
+  <li>
+    <p>change(a,b)</p>
+
+    <p>按s 进入该方法</p>
+  </li>
+  <li>
+    <p>bt查看堆栈</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#0  change (a=5, b=3) at main2.c:6
+#1  0x000055555555468e in main () at main2.c:15
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>f 0 表示切换0</p>
+  </li>
+  <li>
+    <p>quit 退出</p>
+  </li>
+</ol>
+
+<h3 id="3内存管理">3.内存管理</h3>
+
+<ol>
+  <li>32位系统地址总线32位，64位系统地址总线64位</li>
+  <li>2的32次方约等于4G</li>
+  <li>64位操作系统用户可用48位,剩余内存运行系统</li>
+  <li><img src="" alt="内存管理" /></li>
+</ol>
+
+<h3 id="4指针">4.指针</h3>
+
+<p>指针的本质就是内存地址</p>
+
+<h3 id="5操作系统对内存的管理">5.操作系统对内存的管理</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="n">global</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">rect</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">static</span> <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">global</span><span class="o">++</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">quadrate</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">static</span> <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">global</span><span class="o">++</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">rect</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">pa</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">pb</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">pglobal</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">global</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">pquadrate</span><span class="p">)(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span><span class="o">=&amp;</span><span class="n">quadrate</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="n">quadrate</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>gcc -g ./ex.c -o ex.out</p>
+
+<p>gdb ./ex.out</p>
+
+<pre><code class="language-linux">
+//代码段
+p &amp;rect
+$1 = (int (*)(int, int)) 0x5555555546aa &lt;rect&gt; //函数内存地址
+(gdb) p &amp;quadrate
+$2 = (int (*)(int)) 0x5555555546e1 &lt;quadrate&gt; //函数内存地址，函数指令越多,内存差值越多
+
+//数据段
+(gdb) p &amp;global
+$3 = (int *) 0x555555755014 &lt;global&gt;//数据内存地址
+
+//函数段
+//一个函数可以被多次调用
+(gdb) p &amp;a
+$4 = (int *) 0x7fffffffddcc //int 4字节
+(gdb) p &amp;b
+$5 = (int *) 0x7fffffffddd0
+(gdb) p &amp;pa
+$6 = (int **) 0x7fffffffddd8//64位系统指针8字节，32位系统指针4个字节
+(gdb) p &amp;pb
+$7 = (int **) 0x7fffffffdde0
+(gdb) p &amp;s
+$10 = (int *) 0x7fffffffddd4//int 都放在一起声明,所以int类型都连续
+
+
+
+
+
+</code></pre>
+
+<h3 id="5函数栈以及代码段">5.函数栈以及代码段</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">s</span>
+<span class="err">$</span><span class="mi">1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x7fffffffddac</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">s</span>
+<span class="n">rect</span> <span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="n">at</span> <span class="p">.</span><span class="o">/</span><span class="n">ex</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">7</span>
+<span class="mi">7</span>		<span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> 
+<span class="mi">8</span>		<span class="n">global</span><span class="o">++</span><span class="p">;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> 
+<span class="mi">9</span>		<span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">bt</span>
+<span class="cp">#0  rect (a=3, b=3) at ./ex.c:9
+#1  0x0000555555554719 in quadrate (a=3) at ./ex.c:18
+#2  0x0000555555554776 in main () at ./ex.c:30
+</span><span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">s</span>
+<span class="err">$</span><span class="mi">2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x7fffffffdd84</span>
+
+    
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">count</span>
+<span class="err">$</span><span class="mi">3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x55555575501c</span> <span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">f</span> <span class="mi">0</span>
+<span class="cp">#0  rect (a=3, b=3) at ./ex.c:9
+</span><span class="mi">9</span>		<span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">count</span>
+<span class="err">$</span><span class="mi">4</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x555555755018</span> <span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">global</span>
+<span class="err">$</span><span class="mi">5</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x555555755014</span> <span class="o">&lt;</span><span class="n">global</span><span class="o">&gt;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">f</span> <span class="mi">0</span>
+<span class="cp">#0  rect (a=3, b=3) at ./ex.c:9
+</span><span class="mi">9</span>		<span class="kt">int</span> <span class="n">s</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">p</span> <span class="o">&amp;</span><span class="n">global</span>
+<span class="err">$</span><span class="mi">6</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="mh">0x555555755014</span> <span class="o">&lt;</span><span class="n">global</span><span class="o">&gt;</span>
+ 
+   
+<span class="c1">//不同方法中同一变量在不同内存地址中</span>
+<span class="c1">//静态变量,变量在数据段中</span>
+<span class="c1">//全局变量也在数据段中</span>
+</code></pre></div></div>
+
+<h3 id="6指针指向与数据访问">6.指针指向与数据访问</h3>
+
+<ol>
+  <li>p a //a的值</li>
+  <li>p pa //a的地址</li>
+  <li>p *pa //先取a的地址,再获得a的值</li>
+</ol>
+
+<h3 id="7数据声明的内存排列">7.数据声明的内存排列</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">array</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+        <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="o">=&amp;</span><span class="n">a</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">"*p=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
+                <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"----------------------------------------------------</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">p</span><span class="o">=&amp;</span><span class="n">a</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">"*p[%d]=%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+

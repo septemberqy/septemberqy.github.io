@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Git 相关技术</title>
-    <meta name="description" content="git      初始化          $git init            配置(config)          git config –global user.email 邮箱      git config –global user.name 用户名            帮助(help)    ...">
+    <title>Markdown 相关技术</title>
+    <meta name="description" content="markdown1.标题​	# 一级标题​	## 二级标题2.字体      倾斜    前后加1个*    *字体*        加粗    前后加2个*    **加粗字体**        加粗倾斜    前后3个*    ****加粗倾斜***  ">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+    <link rel="canonical" href="http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
     <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
 
 
@@ -90,11 +90,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Git 相关技术</h1>
+        <h1>Markdown 相关技术</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2019-07-17
+                <i class="fa fa-calendar"></i>2019-07-18
             </div>
 
             <div class="label-card">
@@ -114,7 +114,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#git" title="Category: git" rel="category">git</a>
+        <a href="/category/#Markdown" title="Category: Markdown" rel="category">Markdown</a>
     
   
 
@@ -131,8 +131,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#git" title="Tag: git" rel="tag">git</a-->
-        <a href="/tag/#git" title="Tag: git" rel="tag">git</a>
+        <!--a href="/tag/#markdown" title="Tag: markdown" rel="tag">markdown</a-->
+        <a href="/tag/#markdown" title="Tag: markdown" rel="tag">markdown</a>
     
   
 
@@ -143,199 +143,67 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 id="git">git</h2>
+        <h2 id="markdown">markdown</h2>
+
+<h3 id="1标题">1.标题</h3>
+
+<p>​	# 一级标题</p>
+
+<p>​	## 二级标题</p>
+
+<h3 id="2字体">2.字体</h3>
 
 <ul>
   <li>
-    <p>初始化</p>
+    <p>倾斜</p>
 
-    <ul>
-      <li>$git init</li>
-    </ul>
+    <p>前后加1个*</p>
+
+    <p>*字体*</p>
   </li>
   <li>
-    <p>配置(config)</p>
+    <p>加粗</p>
 
-    <ul>
-      <li>git config –global user.email 邮箱</li>
-      <li>git config –global user.name 用户名</li>
-    </ul>
+    <p>前后加2个*</p>
+
+    <p>**加粗字体**</p>
   </li>
   <li>
-    <p>帮助(help)</p>
+    <p>加粗倾斜</p>
 
-    <ul>
-      <li>$ git help</li>
-      <li>$ git help add</li>
-      <li>$ git add –help</li>
-    </ul>
-  </li>
-  <li>
-    <p>忽略文件(ignore)</p>
+    <p>前后3个*</p>
 
-    <ul>
-      <li>$ echo”temp/” » .gitignore</li>
-      <li>$ echo”private_key” » .gitignore
-~~~</li>
-    </ul>
-  </li>
-  <li>
-    <p>状态(status)</p>
-
-    <p>​	显示当前工作区与暂存区（Index）的粗略状态。</p>
-
-    <p>​	# 显示某些文件已修改，哪些文件已准备提交等信息</p>
-
-    <ul>
-      <li>$git status</li>
-    </ul>
-  </li>
-  <li>
-    <p>添加(add)</p>
-
-    <p>将文件加入缓存区</p>
-
-    <p># 添加文件</p>
-
-    <ul>
-      <li>$ git add HelloWorld.java</li>
-    </ul>
-
-    <p># 添加子目录下的文件</p>
-
-    <ul>
-      <li>$ git add /path/to/file/HelloWorld.c</li>
-    </ul>
-
-    <p># 通配符方式添加多个文件</p>
-
-    <ul>
-      <li>$ git add ./*.java</li>
-    </ul>
-
-    <p># 添加工作目录下的所有文件</p>
-
-    <ul>
-      <li>$ git add -A</li>
-    </ul>
-  </li>
-  <li>
-    <p>分支(branch)</p>
-
-    <p>该命令用于管理分支。可以查看，修改，创建，删除分支。、</p>
-
-    <p># 列出所有本质</p>
-
-    <ul>
-      <li>$ git branch -a</li>
-    </ul>
-
-    <p># 创建新分支</p>
-
-    <ul>
-      <li>$ git branch myNewBranch</li>
-    </ul>
-
-    <p># 删除分支</p>
-
-    <ul>
-      <li>$ git branch -d myBranch</li>
-    </ul>
-
-    <p># 重命名分支： git branch -m <oldname> <newname></newname></oldname></p>
-
-    <ul>
-      <li>$ git branch -m myBranchName myNewBranchName</li>
-    </ul>
-
-    <p># 修改分支描述</p>
-
-    <ul>
-      <li>$ git branch myBranchName –edit-description</li>
-    </ul>
-  </li>
-  <li>
-    <p>提交（commit)</p>
-
-    <p>将缓存区（Index）中的内容提交到git仓库中</p>
-
-    <p># 提交时填写说明(message)</p>
-
-    <ul>
-      <li>$ git commit -m “Added multiplyNumbers() function to HelloWorld.c”</li>
-    </ul>
-
-    <p># 提交时带数字签名（由提交者的GPG密钥生成）</p>
-
-    <ul>
-      <li>$ git commit -S -m “signed commit message”</li>
-    </ul>
-
-    <p># 自动将修改的文件加入缓存区（Index），再进行提交。</p>
-
-    <ul>
-      <li>$ git commit -a -m “Modified foo.php and removed bar.php”</li>
-    </ul>
-
-    <p># 把本次提交与最后一次提交合并（删除最后一次提交，加入合并后的提交）</p>
-
-    <ul>
-      <li>$ git commit –amend -m “Correct message”</li>
-    </ul>
-  </li>
-  <li>
-    <p>差异（diff)</p>
-
-    <p>显示工作目录、缓存区（Index）、当前git库版本之间的差异</p>
-
-    <p># 显示工作目录与缓存区（Index）之间的差异</p>
-
-    <ul>
-      <li>$ git diff</li>
-    </ul>
-
-    <p># 显示缓存区（Index）与当前git库版本之间的差异</p>
-
-    <ul>
-      <li>$ git diff –cached</li>
-    </ul>
-
-    <p># 显示工作目录与当前git库版本之间的差异</p>
-
-    <ul>
-      <li>$ git diff HEAD</li>
-    </ul>
-  </li>
-  <li>
-    <p>日志(log)</p>
-
-    <p>显示提交到git仓库的记录信息.</p>
-
-    <p># 显示所有提交</p>
-
-    <ul>
-      <li>$ git log</li>
-    </ul>
-
-    <p># 以简化单行方式显示（每个提交）</p>
-
-    <ul>
-      <li>$ git log –oneline</li>
-    </ul>
-
-    <p># 只显示合并的提交</p>
-
-    <ul>
-      <li>$ git log –merges</li>
-    </ul>
-
-    <p># 在提交行的左侧以字符串图像的方式表示版本变化情况</p>
-
-    <ul>
-      <li>$ git log –graph</li>
-    </ul>
+    <p>****加粗倾斜***</p>
   </li>
 </ul>
+
+<p>~~~</p>
+<h3 id="3图片">3.图片</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![图片alt](图片地址 ''图片title'')
+</code></pre></div></div>
+
+<h3 id="4超链接">4.超链接</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[超链接名](超链接地址 "超链接title")
+title可加可不加
+</code></pre></div></div>
+
+<h3 id="5列表">5.列表</h3>
+
+<p>​	无序列表</p>
+
+<ul>
+  <li>*</li>
+</ul>
+
+<p>有序列表</p>
+
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
 
 
         </article>
@@ -402,13 +270,13 @@
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>上一篇</strong> <a href="/2019/07/17/UBUNTU%E5%AE%89%E8%A3%85/">Linux 相关技术</a></p>
+        <p><strong>上一篇</strong> <a href="/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">Git 相关技术</a></p>
         
     </div>
     <div class="nex">
 
         
-        <p><strong>下一篇</strong> <a href="/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Markdown 相关技术</a></p>
+        <p><strong>下一篇</strong> <a href="/2019/07/19/20190719%E6%97%A5%E5%BF%97/">20190719日志</a></p>
         
     </div>
 </div>
@@ -426,8 +294,8 @@
      */
 
     var disqus_config = function() {
-        this.page.url = 'http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://localhost:4000/2019/07/17/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
