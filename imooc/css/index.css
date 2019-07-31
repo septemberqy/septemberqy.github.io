@@ -427,7 +427,7 @@ font-size:12px;color:#4D555D;font-weight: bold}
 
 .backgd{background:url("../imgs/back.jpg") no-repeat center center;background-size: cover;
 height:408px;
-width:100%;
+min-width:1284px;
 overflow: hidden}
 
 .fontcolorw{color:#fff;}
