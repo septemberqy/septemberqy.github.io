@@ -49,7 +49,7 @@ excerpt_separator: ~~~
 
 
 
-![](/home/black/文档/socket/socketserver1.png)
+![](/assets/socketserver1.png)
 
 
 
@@ -82,7 +82,7 @@ excerpt_separator: ~~~
 
 
 
-![](/home/black/文档/socket/socketClient.png)
+![](/assets/socketClient.png)
 
 
 
@@ -132,13 +132,13 @@ excerpt_separator: ~~~
 
 
 
-![多次交互](/home/black/文档/socket/serverwhile.png)
+![多次交互](/assets/serverwhile.png)
 
 
 
 奥,可以接收到所有输入了,那么我们再开个客户端试试
 
-![服务器没鸟第二个客户端](/home/black/文档/socket/serverthree.png)
+![服务器没鸟第二个客户端](/assets/serverthree.png)
 
 
 
@@ -237,9 +237,11 @@ NO，服务器完全没有响应第二个客户端
 
 ```
 
-![ok]({{/assets/serverall.png}})
+![ok](/assets/serverall.png)
 
 
 
 现在就可以收到所有客户端的请求了！
 
+
+~~~
