@@ -5,345 +5,335 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Jul 2019 20:04:43 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Jul 2019 20:04:43 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Aug 2019 14:19:22 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Aug 2019 14:19:22 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title>20190723日志</title>
-        <description>&lt;h3 id=&quot;20190723&quot;&gt;20190723&lt;/h3&gt;
+        <title>SASS</title>
+        <description>&lt;h3 id=&quot;sass&quot;&gt;sass&lt;/h3&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;添加聊天室进入退出通知&lt;/li&gt;
-  &lt;li&gt;js打印图形&lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Wed, 24 Jul 2019 04:13:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/24/20190723/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/24/20190723/</guid>
-        
-        <category>日志</category>
-        
-        
-        <category>日志</category>
-        
-      </item>
-    
-      <item>
-        <title>nodejs学习笔记</title>
-        <description>&lt;h2 id=&quot;nodejs笔记篇&quot;&gt;Nodejs笔记篇&lt;/h2&gt;
-
-&lt;h3 id=&quot;1关于-nodejs&quot;&gt;1.关于 Node.js&lt;/h3&gt;
-
-​	Node.js是一个让JavaScript运行在服务器端的开发平台.
-
-&lt;h4 id=&quot;11-介绍&quot;&gt;1.1 介绍&lt;/h4&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    node.js 不是一种独立的语言,与PHP,JSP,PYTHON,PERL,RUBY的既是语言，也是平台不同,node.js使用javascript进行编成,运行在javascript引擎上(V8)
-  &lt;/li&gt;
-  &lt;li&gt;
-    与PHP,JSP等相比，Nodejs跳过了Apache,Nginx,ISS等HTTP服务器,它自己不用建设在任何服务器软件之上.nodejs的许多谁就理念与经典架构LANP有着很大的不同,可以提供强大的伸缩能力
-
-    linux apache/nginx mysql php
-
-    linux nodejs mongodb mysql nodejs本身就是服务器  js作为后端语言
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Wed, 24 Jul 2019 01:20:23 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/</guid>
-        
-        <category>nodejs</category>
-        
-        
-        <category>nodejs</category>
-        
-      </item>
-    
-      <item>
-        <title>20190722日志</title>
-        <description>&lt;h3 id=&quot;20190722&quot;&gt;20190722&lt;/h3&gt;
-
-&lt;h3 id=&quot;1nodejs聊天室服务器端客户端&quot;&gt;1.nodejs聊天室服务器端,客户端&lt;/h3&gt;
-
-&lt;h3 id=&quot;2准备技术分享相关内容&quot;&gt;2.准备技术分享相关内容&lt;/h3&gt;
+&lt;h4 id=&quot;1特色&quot;&gt;1.特色&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;安装LNMP环境&lt;/li&gt;
-  &lt;li&gt;安装ruby环境&lt;/li&gt;
-  &lt;li&gt;查找相关资料&lt;/li&gt;
-  &lt;li&gt;准备PPT&lt;/li&gt;
+  &lt;li&gt;完全兼容 CSS3&lt;/li&gt;
+  &lt;li&gt;在 CSS 语言基础上添加了扩展功能，比如变量、嵌套 (nesting)、混合 (mixin)&lt;/li&gt;
+  &lt;li&gt;对颜色和其它值进行操作的{Sass::Script::Functions 函数}&lt;/li&gt;
+  &lt;li&gt;函数库控制指令之类的高级功能&lt;/li&gt;
+  &lt;li&gt;良好的格式，可对输出格式进行定制&lt;/li&gt;
+  &lt;li&gt;支持 Firebug&lt;/li&gt;
 &lt;/ul&gt;
 
-</description>
-        <pubDate>Tue, 23 Jul 2019 03:57:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/23/20190722%E6%97%A5%E5%BF%97/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/23/20190722%E6%97%A5%E5%BF%97/</guid>
-        
-        <category>日志</category>
-        
-        
-        <category>日志</category>
-        
-      </item>
-    
-      <item>
-        <title>nodejs聊天室</title>
-        <description>&lt;h2 id=&quot;nodejs聊天室&quot;&gt;NODEJS聊天室&lt;/h2&gt;
+&lt;h4 id=&quot;2安装&quot;&gt;2.安装&lt;/h4&gt;
 
-&lt;h4 id=&quot;1切换国内源&quot;&gt;1.切换国内源&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;language-linux&quot;&gt;gem install sass
+&lt;/code&gt;&lt;/pre&gt;
 
-​	npm install -g cnpm –registry=&lt;a href=&quot;https://link.jianshu.com/?t=https://registry.npm.taobao.org&quot;&gt;https://registry.npm.taobao.org&lt;/a&gt;
+&lt;h4 id=&quot;3css扩展&quot;&gt;3.CSS扩展&lt;/h4&gt;
 
-&lt;h4 id=&quot;2安装需要软件包&quot;&gt;2.安装需要软件包&lt;/h4&gt;
+&lt;h5 id=&quot;31嵌套规则-nested-rules&quot;&gt;3.1嵌套规则 (Nested Rules)&lt;/h5&gt;
 
-​	这里需要安装2个软件包
+​	Sass 允许将一套 CSS 样式嵌套进另一套样式中，内层的样式将它外层的选择器作为父选择器，例如：
 
-&lt;ul&gt;
-  &lt;li&gt;cnpm install socket.io&lt;/li&gt;
-  &lt;li&gt;cnpm install express&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#00ff00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;97%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-</description>
-        <pubDate>Tue, 23 Jul 2019 03:54:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/23/nodejs%E8%81%8A%E5%A4%A9%E5%AE%A4/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/23/nodejs%E8%81%8A%E5%A4%A9%E5%AE%A4/</guid>
-        
-        <category>nodejs</category>
-        
-        
-        <category>nodejs</category>
-        
-      </item>
-    
-      <item>
-        <title>20190721日志</title>
-        <description>&lt;h2 id=&quot;20190721&quot;&gt;20190721&lt;/h2&gt;
-
-&lt;h3 id=&quot;nodejs&quot;&gt;nodejs&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    搭建基于net的server和client的聊天室
-  &lt;/li&gt;
-  &lt;li&gt;
-    用npm安装socket.io插件
-  &lt;/li&gt;
-  &lt;li&gt;
-    搭建基于socket.io的server和client的聊天室
-  &lt;/li&gt;
-  &lt;li&gt;
-    使用express搭建聊天室路由功能
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-</description>
-        <pubDate>Mon, 22 Jul 2019 03:42:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/22/20190721%E6%97%A5%E5%BF%97/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/22/20190721%E6%97%A5%E5%BF%97/</guid>
-        
-        <category>日志</category>
-        
-        
-        <category>日志</category>
-        
-      </item>
-    
-      <item>
-        <title>日志</title>
-        <description>&lt;h3 id=&quot;20190719&quot;&gt;20190719&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;processon幕布c语言&quot;&gt;processOn,幕布,C语言&lt;/h3&gt;
-
-1.更改jekyll博客项目
-
-2.使用processOn制作聊天室流程图
-
-3.使用幕布写tcp/ip导图
-
-4.学习C语言
-
-</description>
-        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/19/%E6%97%A5%E5%BF%97/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/19/%E6%97%A5%E5%BF%97/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>C语言</title>
-        <description>&lt;h2 id=&quot;c语言&quot;&gt;C语言&lt;/h2&gt;
-
-&lt;h3 id=&quot;一概论&quot;&gt;一.概论&lt;/h3&gt;
-
-&lt;h4 id=&quot;1c语言是什么&quot;&gt;1.C语言是什么&lt;/h4&gt;
-
-​	c语言是一种通用的,过程式的编成语言,广泛用于系统与应用软件的开发
-
-​	人类与计算机交流的语言
-
-&lt;h4 id=&quot;2c语言特点&quot;&gt;2.C语言特点&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;简单&lt;/li&gt;
-  &lt;li&gt;快速&lt;/li&gt;
-  &lt;li&gt;高性能&lt;/li&gt;
-  &lt;li&gt;兼容性好&lt;/li&gt;
-  &lt;li&gt;易于学习&lt;/li&gt;
-  &lt;li&gt;功能强大&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;3c语言最适合做什么&quot;&gt;3.C语言最适合做什么&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;linux嵌入式
-    &lt;ul&gt;
-      &lt;li&gt;小巧&lt;/li&gt;
-      &lt;li&gt;灵活&lt;/li&gt;
-      &lt;li&gt;适合做小工具&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;硬件编程&lt;/li&gt;
-  &lt;li&gt;高性能软件&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/19/C%E8%AF%AD%E8%A8%80/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/19/C%E8%AF%AD%E8%A8%80/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>C指针</title>
-        <description>&lt;h2 id=&quot;c指针&quot;&gt;C指针&lt;/h2&gt;
-
-&lt;h3 id=&quot;1初始指针&quot;&gt;1.初始指针&lt;/h3&gt;
-
-main.c
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;num a=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;num b=%d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;.redbox&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ff0000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+编译为
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#00ff00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;97%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;#main&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.redbox&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ff0000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 </description>
-        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/19/C%E6%8C%87%E9%92%88/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/19/C%E6%8C%87%E9%92%88/</guid>
+        <pubDate>Sat, 03 Aug 2019 23:51:09 +0800</pubDate>
+        <link>http://localhost:4000/2019/08/03/sass/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/08/03/sass/</guid>
         
+        <category>SASS</category>
+        
+        
+        <category>SASS</category>
         
       </item>
     
       <item>
-        <title>20190719日志</title>
-        <description>&lt;h2 id=&quot;20190719&quot;&gt;20190719&lt;/h2&gt;
+        <title>20190802日志</title>
+        <description>&lt;h3 id=&quot;20190802日志&quot;&gt;20190802日志&lt;/h3&gt;
 
-&lt;h2 id=&quot;c语言&quot;&gt;C语言&lt;/h2&gt;
+1.完成幕客首页sass
 
-&lt;ol&gt;
-  &lt;li&gt;
-    了解C语言基础语法
-  &lt;/li&gt;
-  &lt;li&gt;
-    了解C语言编译与make语法
-  &lt;/li&gt;
-  &lt;li&gt;
-    了解C语言指针
-  &lt;/li&gt;
-  &lt;li&gt;
-    使用gdb追踪C语言内存变化
-  &lt;/li&gt;
-  &lt;li&gt;
-    安装node环境
-
-    tar zxvf node-v10.16.0.tar.gz
-
-    cd node-v10.16.0
-
-    configure –prefix=/usr/local/node
-
-    make &amp;amp;&amp;amp; make install
-  &lt;/li&gt;
-  &lt;li&gt;
-    测试node http模块
-  &lt;/li&gt;
-&lt;/ol&gt;
-
+2.nodejs聊天室但辽群聊
 </description>
-        <pubDate>Fri, 19 Jul 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/19/20190719%E6%97%A5%E5%BF%97/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/19/20190719%E6%97%A5%E5%BF%97/</guid>
+        <pubDate>Sat, 03 Aug 2019 03:19:12 +0800</pubDate>
+        <link>http://localhost:4000/2019/08/03/20190802%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/08/03/20190802%E6%97%A5%E5%BF%97/</guid>
         
+        <category>日志</category>
+        
+        
+        <category>日志</category>
         
       </item>
     
       <item>
-        <title>Markdown 相关技术</title>
-        <description>&lt;h2 id=&quot;markdown&quot;&gt;markdown&lt;/h2&gt;
+        <title>20190801日志</title>
+        <description>&lt;h3 id=&quot;20190801日志&quot;&gt;20190801日志&lt;/h3&gt;
 
-&lt;h3 id=&quot;1标题&quot;&gt;1.标题&lt;/h3&gt;
+1.用sass改写慕课首页css
+</description>
+        <pubDate>Fri, 02 Aug 2019 03:47:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/08/02/20190801%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/08/02/20190801%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title>20190731日志</title>
+        <description>&lt;h3 id=&quot;20190731日志&quot;&gt;20190731日志&lt;/h3&gt;
 
-​	# 一级标题
+1.完成幕客首页
 
-​	## 二级标题
+2.整理HTML，CSS笔记
 
-&lt;h3 id=&quot;2字体&quot;&gt;2.字体&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 01 Aug 2019 04:47:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/08/01/20190731%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/08/01/20190731%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title>HTML标签</title>
+        <description>&lt;h3 id=&quot;html标签&quot;&gt;HTML标签&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    倾斜
+    **&lt;a&gt;**&lt;/a&gt;
 
-    前后加1个*
+    ​	指向 w3school 的超链接
 
-    *字体*
-  &lt;/li&gt;
-  &lt;li&gt;
-    加粗
+    &lt;ul&gt;
+      &lt;li&gt;
+        href	  规定链接指向的页面的 URL
+      &lt;/li&gt;
+      &lt;li&gt;
+        download    规定被下载的超链接目标
+      &lt;/li&gt;
+      &lt;li&gt;
+        target      规定在何处打开链接文档
 
-    前后加2个*
+        &lt;ul&gt;
+          &lt;li&gt;
+            _blank
 
-    **加粗字体**
-  &lt;/li&gt;
-  &lt;li&gt;
-    加粗倾斜
+            浏览器总在一个新打开、未命名的窗口中载入目标文档。
+          &lt;/li&gt;
+          &lt;li&gt;
+            _self
 
-    前后3个*
-
-    ****加粗倾斜***
+            默认 自身窗口打开
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
-        <pubDate>Thu, 18 Jul 2019 23:06:05 +0800</pubDate>
-        <link>http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+        <pubDate>Tue, 30 Jul 2019 22:13:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/30/HTML%E6%A0%87%E7%AD%BE/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/30/HTML%E6%A0%87%E7%AD%BE/</guid>
         
-        <category>markdown</category>
+        <category>HTML</category>
         
         
-        <category>Markdown</category>
+        <category>HTML</category>
+        
+      </item>
+    
+      <item>
+        <title>CSS标签</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;动画属性animation&quot;&gt;动画属性（Animation）&lt;/h2&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        @keyframes
+
+        通过 @keyframes 规则，您能够创建动画。
+
+        创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。
+
+        在动画过程中，您能够多次改变这套 CSS 样式。
+
+        以百分比来规定改变发生的时间，或者通过关键词 “from” 和 “to”，等价于 0% 和 100%。
+
+        0% 是动画的开始时间，100% 动画的结束时间。
+
+        为了获得最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。
+
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@keyframes animationname {keyframes-selector {css-styles;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            animationname	必需。定义动画的名称。
+          &lt;/li&gt;
+          &lt;li&gt;
+            keyframes-selector   必需。动画时长的百分比。
+
+            合法的值：
+
+            &lt;ul&gt;
+              &lt;li&gt;0-100%&lt;/li&gt;
+              &lt;li&gt;from（与 0% 相同）&lt;/li&gt;
+              &lt;li&gt;to（与 100% 相同）&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;em&gt;css-styles&lt;/em&gt;   必需。一个或多个合法的 CSS 样式属性。
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 30 Jul 2019 22:13:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/30/CSS%E6%A0%87%E7%AD%BE/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/30/CSS%E6%A0%87%E7%AD%BE/</guid>
+        
+        <category>CSS</category>
+        
+        
+        <category>CSS</category>
+        
+      </item>
+    
+      <item>
+        <title>20190729日志</title>
+        <description>&lt;h3 id=&quot;20190729日志&quot;&gt;20190729日志&lt;/h3&gt;
+
+1.继续写幕客首页
+</description>
+        <pubDate>Tue, 30 Jul 2019 02:47:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/30/20190729%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/30/20190729%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title>阻止js冒泡</title>
+        <description>&lt;h3 id=&quot;阻止js冒泡&quot;&gt;阻止JS冒泡&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    stopPropagation
+
+    1.非IE
+
+    ​	stopPropagation
+
+    2.IE
+
+    ​	window.event.cancelBubble
+  &lt;/li&gt;
+  &lt;li&gt;
+    阻止浏览器默认行为
+
+    1.非IE
+
+    ​	e.preventDefault();
+
+    2.IE
+
+    ​	window.event.returnValue = false;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 30 Jul 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/30/%E9%98%BB%E6%AD%A2JS%E5%86%92%E6%B3%A1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/30/%E9%98%BB%E6%AD%A2JS%E5%86%92%E6%B3%A1/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>20190726日志</title>
+        <description>&lt;h3 id=&quot;20190726日志&quot;&gt;20190726日志&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;看w3c html标签&lt;/li&gt;
+  &lt;li&gt;写幕客页面&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Sat, 27 Jul 2019 01:47:23 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/27/20190726%E6%97%A5%E5%BF%97/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/27/20190726%E6%97%A5%E5%BF%97/</guid>
+        
+        <category>日志</category>
+        
+        
+        <category>日志</category>
+        
+      </item>
+    
+      <item>
+        <title> AJAX</title>
+        <description>&lt;h3 id=&quot;js-ajax&quot;&gt;JS AJAX&lt;/h3&gt;
+
+&lt;h3 id=&quot;1什么是ajax&quot;&gt;1.什么是AJAX&lt;/h3&gt;
+
+&lt;strong&gt;AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。&lt;/strong&gt;
+
+AJAX = 异步 JavaScript 和 XML。
+
+AJAX 是一种用于创建快速动态网页的技术。
+
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+
+传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。
+
+</description>
+        <pubDate>Thu, 25 Jul 2019 17:25:00 +0800</pubDate>
+        <link>http://localhost:4000/2019/07/25/JS_AJAX/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/25/JS_AJAX/</guid>
+        
+        <category>AJAX</category>
+        
+        
+        <category>js</category>
         
       </item>
     

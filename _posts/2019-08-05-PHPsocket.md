@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "20190805PHP搭建socket聊天室"
+title:  "PHP搭建socket聊天室"
 date:   2019-08-05 19:19:12
 categories: PHP
 tags: PHP
@@ -41,7 +41,7 @@ excerpt_separator: ~~~
 	//等待客户端连接
 	$io = socket_accept($sock);
 	//获取客户端消息
-	$msg = socket_read($io,1024)；
+	$msg = socket_read($io,1024);
 ?>
 ```
 
@@ -237,7 +237,7 @@ NO，服务器完全没有响应第二个客户端
 
 ```
 
-![](/home/black/文档/socket/serverall.png)
+![ok](socket/serverall.png)
 
 
 

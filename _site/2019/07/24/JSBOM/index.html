@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JSBOM</title>
+    <meta name="description" content="BOM1. 什么是BOMBrowser Object Model  浏览器对象模型2. JavaScript 对象层次2.1 对象种类  自定义对象 Object  内置对象  A/S/B/N/D/M/R/G  BOM 浏览器对象模型  DOM Document Object Model  文档对象模型">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2019/07/24/JSBOM/">
+    <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">SeptemberQY</a>
+        <small>phper</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>JSBOM</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2019-07-24
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#js" title="Category: js" rel="category">js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#js" title="Tag: js" rel="tag">js</a-->
+        <a href="/tag/#js" title="Tag: js" rel="tag">js</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 id="bom">BOM</h1>
+
+<h3 id="1-什么是bom">1. 什么是BOM</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Browser Object Model  浏览器对象模型
+</code></pre></div></div>
+
+<h3 id="2-javascript-对象层次">2. JavaScript 对象层次</h3>
+
+<h4 id="21-对象种类">2.1 对象种类</h4>
+
+<ul>
+  <li>自定义对象 Object</li>
+  <li>内置对象  A/S/B/N/D/M/R/G</li>
+  <li>BOM 浏览器对象模型</li>
+  <li>DOM Document Object Model  文档对象模型
+~~~
+    <h4 id="22-对象树-倒树状结构">2.2 对象树 (倒树状结构)</h4>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                     window
+                        |
+history   location   document screen   navigator
+                        |
+                    doc    html
+                            |
+                    head   body
+                     |       |
+                title...   div span p h4 li  ul...
+</code></pre></div></div>
+
+<h3 id="3-bom-对象">3. BOM 对象</h3>
+
+<h4 id="31-window">3.1 window</h4>
+
+<ul>
+  <li>
+    <p>描述整个浏览器窗口的对象</p>
+  </li>
+  <li>
+    <p>它是JS中所有对象的根对象</p>
+  </li>
+  <li>
+    <p>使用window的属性或方法,可以省略window的调用</p>
+  </li>
+  <li>
+    <p>自定义对象 / 变量 / 函数</p>
+  </li>
+  <li>
+    <p>属性: 见手册</p>
+  </li>
+  <li>
+    <p>方法: 
+clearInterval() 取消由 setInterval() 设置的 timeout。 
+clearTimeout() 取消由 setTimeout() 方法设置的 timeout。 
+setInterval() 按照指定的周期（以毫秒计）来调用函数或计算表达式。 
+setTimeout() 在指定的毫秒数后调用函数或计算表达式。</p>
+
+    <p>alert()   警告框
+prompt()  输入框
+confirm() 确认框</p>
+
+    <p>open()    打开新窗口
+close()   关闭自己打开过的窗口
+print()   打印</p>
+
+    <p>scrollTo()   滚到哪去
+scrollBy()   滚过少</p>
+  </li>
+</ul>
+
+<h4 id="32-history">3.2 history</h4>
+
+<p>length</p>
+
+<p>back()
+forward()
+go()</p>
+
+<h4 id="33-location">3.3 location</h4>
+
+<ul>
+  <li>属性</li>
+  <li>方法</li>
+</ul>
+
+<h4 id="34-screen">3.4 screen</h4>
+
+<h4 id="35-navigator">3.5 navigator</h4>
+
+<hr />
+
+<p>#</p>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2019/07/24/20190723/">20190723日志</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2019/07/24/JSDOM/">JSDOM</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2019/07/24/JSBOM/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/24/JSBOM/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//septemberqy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             人生如梦 
+        </p>
+        <p class="contact">
+            Contact me at:  
+            <a href="mailto:ryougiking@sina.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

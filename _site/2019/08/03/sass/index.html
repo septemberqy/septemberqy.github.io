@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SASS</title>
+    <meta name="description" content="sass1.特色  完全兼容 CSS3  在 CSS 语言基础上添加了扩展功能，比如变量、嵌套 (nesting)、混合 (mixin)  对颜色和其它值进行操作的{Sass::Script::Functions 函数}  函数库控制指令之类的高级功能  良好的格式，可对输出格式进行定制  支持 Firebug2...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2019/08/03/sass/">
+    <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">SeptemberQY</a>
+        <small>phper</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>SASS</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2019-08-03
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#SASS" title="Category: SASS" rel="category">SASS</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#SASS" title="Tag: SASS" rel="tag">SASS</a-->
+        <a href="/tag/#SASS" title="Tag: SASS" rel="tag">SASS</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h3 id="sass">sass</h3>
+
+<h4 id="1特色">1.特色</h4>
+
+<ul>
+  <li>完全兼容 CSS3</li>
+  <li>在 CSS 语言基础上添加了扩展功能，比如变量、嵌套 (nesting)、混合 (mixin)</li>
+  <li>对颜色和其它值进行操作的{Sass::Script::Functions 函数}</li>
+  <li>函数库控制指令之类的高级功能</li>
+  <li>良好的格式，可对输出格式进行定制</li>
+  <li>支持 Firebug</li>
+</ul>
+
+<h4 id="2安装">2.安装</h4>
+
+<pre><code class="language-linux">gem install sass
+</code></pre>
+
+<h4 id="3css扩展">3.CSS扩展</h4>
+
+<h5 id="31嵌套规则-nested-rules">3.1嵌套规则 (Nested Rules)</h5>
+
+<p>​	Sass 允许将一套 CSS 样式嵌套进另一套样式中，内层的样式将它外层的选择器作为父选择器，例如：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">#main</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="mh">#00ff00</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">97%</span><span class="p">;</span>
+
+  <span class="nc">.redbox</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="mh">#ff0000</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#main</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#00ff00</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">97%</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nf">#main</span> <span class="nt">p</span> <span class="nc">.redbox</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ff0000</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#000000</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>~~~</p>
+<h5 id="32父选择器--referencing-parent-selectors-">3.2父选择器 <code class="highlighter-rouge">&amp;</code> (Referencing Parent Selectors: <code class="highlighter-rouge">&amp;</code>)</h5>
+
+<p>在嵌套 CSS 规则时，有时也需要直接使用嵌套外层的父选择器，例如，当给某个元素设定 <code class="highlighter-rouge">hover</code> 样式时，或者当 <code class="highlighter-rouge">body</code> 元素有某个 classname 时，可以用 <code class="highlighter-rouge">&amp;</code> 代表嵌套规则外层的父选择器。</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span> <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nt">body</span><span class="nc">.firefox</span> <span class="k">&amp;</span> <span class="p">{</span> <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nt">body</span><span class="nc">.firefox</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="33属性嵌套">3.3属性嵌套</h5>
+
+<p>有些 CSS 属性遵循相同的命名空间 (namespace)，比如 <code class="highlighter-rouge">font-family, font-size, font-weight</code> 都以 <code class="highlighter-rouge">font</code> 作为属性的命名空间。为了便于管理这样的属性，同时也为了避免了重复输入，Sass 允许将属性嵌套在命名空间中，例如：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.funky</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">family</span><span class="p">:</span> <span class="nb">fantasy</span><span class="p">;</span>
+    <span class="nl">size</span><span class="p">:</span> <span class="m">30em</span><span class="p">;</span>
+    <span class="na">weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.funky</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">fantasy</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">30em</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="4注释">4.注释</h4>
+
+<p>Sass 支持标准的 CSS 多行注释 <code class="highlighter-rouge">/* */</code>，以及单行注释 <code class="highlighter-rouge">//</code>，前者会 被完整输出到编译后的 CSS 文件中，而后者则不会，例如：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* This comment is
+ * several lines long.
+ * since it uses the CSS comment syntax,
+ * it will appear in the CSS output. */</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// These comments are only one line long each.</span>
+<span class="c1">// They won't appear in the CSS output,</span>
+<span class="c1">// since they use the single-line comment syntax.</span>
+<span class="nt">a</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* This comment is
+ * several lines long.
+ * since it uses the CSS comment syntax,
+ * it will appear in the CSS output. */</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">a</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="5sassscrupt">5.Sassscrupt</h4>
+
+<h5 id="51变量">5.1变量</h5>
+
+<ul>
+  <li>变量声明</li>
+</ul>
+
+<p>​	SassScript 最普遍的用法就是变量，变量以美元符号开头，赋值方法与 CSS 属性的写法一样：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$width</span><span class="p">:</span> <span class="m">5em</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>直接使用即调用变量：</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#main</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="err">$</span><span class="n">width</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>变量支持块级作用域，嵌套规则内定义的变量只能在嵌套规则内使用（局部变量），不在嵌套规则内定义的变量则可在任何地方使用（全局变量）。将局部变量转换为全局变量可以添加 <code class="highlighter-rouge">!global</code></p>
+  </li>
+  <li>
+    <p>变量类型</p>
+
+    <ul>
+      <li>
+        <p>数字，<code class="highlighter-rouge">1, 2, 13, 10px</code></p>
+      </li>
+      <li>
+        <p>字符串，有引号字符串与无引号字符串，<code class="highlighter-rouge">"foo", 'bar', baz</code></p>
+
+        <p>SassScript 支持 CSS 的两种字符串类型：有引号字符串 (quoted strings)，如 <code class="highlighter-rouge">"Lucida Grande"</code> <code class="highlighter-rouge">'http://sass-lang.com'</code>；与无引号字符串 (unquoted strings)，如 <code class="highlighter-rouge">sans-serif</code> <code class="highlighter-rouge">bold</code>，在编译 CSS 文件时不会改变其类型。只有一种情况例外，使用 <code class="highlighter-rouge">#{}</code> (interpolation) 时，有引号字符串将被编译为无引号字符串，这样便于在 mixin 中引用选择器名：</p>
+
+        <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">firefox-message</span><span class="p">(</span><span class="nv">$selector</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">body</span><span class="nc">.firefox</span> <span class="si">#{</span><span class="nv">$selector</span><span class="si">}</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="s2">"Hi, Firefox users!"</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@include</span> <span class="nd">firefox-message</span><span class="p">(</span><span class="s2">".header"</span><span class="p">);</span>
+</code></pre></div>        </div>
+
+        <p>编译为</p>
+
+        <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span><span class="nc">.firefox</span> <span class="nc">.header</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="nl">content</span><span class="p">:</span> <span class="s1">"Hi, Firefox users!"</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>颜色，<code class="highlighter-rouge">blue, #04a3f9, rgba(255,0,0,0.5)</code></p>
+      </li>
+      <li>
+        <p>布尔型，<code class="highlighter-rouge">true, false</code></p>
+      </li>
+      <li>
+        <p>空值，<code class="highlighter-rouge">null</code></p>
+      </li>
+      <li>
+        <p>数组 (list)，用空格或逗号作分隔符，<code class="highlighter-rouge">1.5em 1em 0 2em, Helvetica, Arial, sans-serif</code></p>
+
+        <p>数组 (lists) 指 Sass 如何处理 CSS 中 <code class="highlighter-rouge">margin: 10px 15px 0 0</code> 或者 <code class="highlighter-rouge">font-face: Helvetica, Arial, sans-serif</code> 这样通过空格或者逗号分隔的一系列的值。事实上，独立的值也被视为数组 —— 只包含一个值的数组。</p>
+
+        <p>数组本身没有太多功能，但 <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html#list-functions">Sass list functions</a> 赋予了数组更多新功能：<code class="highlighter-rouge">nth</code> 函数可以直接访问数组中的某一项；<code class="highlighter-rouge">join</code> 函数可以将多个数组连接在一起；<code class="highlighter-rouge">append</code> 函数可以在数组中添加新值；而 <code class="highlighter-rouge">@each</code> 指令能够遍历数组中的每一项。</p>
+
+        <p>数组中可以包含子数组，比如 <code class="highlighter-rouge">1px 2px, 5px 6px</code> 是包含 <code class="highlighter-rouge">1px 2px</code> 与 <code class="highlighter-rouge">5px 6px</code> 两个数组的数组。如果内外两层数组使用相同的分隔方式，需要用圆括号包裹内层，所以也可以写成 <code class="highlighter-rouge">(1px 2px) (5px 6px)</code>。变化是，之前的 <code class="highlighter-rouge">1px 2px, 5px 6px</code> 使用逗号分割了两个子数组 (comma-separated)，而 <code class="highlighter-rouge">(1px 2px) (5px 6px)</code> 则使用空格分割(space-separated)。</p>
+
+        <p>当数组被编译为 CSS 时，Sass 不会添加任何圆括号（CSS 中没有这种写法），所以 <code class="highlighter-rouge">(1px 2px) (5px 6px)</code> 与 <code class="highlighter-rouge">1px 2px, 5px 6px</code> 在编译后的 CSS 文件中是完全一样的，但是它们在 Sass 文件中却有不同的意义，前者是包含两个数组的数组，而后者是包含四个值的数组。</p>
+
+        <p>用 <code class="highlighter-rouge">()</code> 表示不包含任何值的空数组（在 Sass 3.3 版之后也视为空的 map）。空数组不可以直接编译成 CSS，比如编译 <code class="highlighter-rouge">font-family: ()</code> Sass 将会报错。如果数组中包含空数组或空值，编译时将被清除，比如 <code class="highlighter-rouge">1px 2px () 3px</code> 或 <code class="highlighter-rouge">1px 2px null 3px</code>。</p>
+
+        <p>基于逗号分隔的数组允许保留结尾的逗号，这样做的意义是强调数组的结构关系，尤其是需要声明只包含单个值的数组时。例如 <code class="highlighter-rouge">(1,)</code> 表示只包含 <code class="highlighter-rouge">1</code> 的数组，而 <code class="highlighter-rouge">(1 2 3,)</code> 表示包含 <code class="highlighter-rouge">1 2 3</code> 这个以空格分隔的数组的数组。</p>
+      </li>
+      <li>
+        <p>maps, 相当于 JavaScript 的 object，<code class="highlighter-rouge">(key1: value1, key2: value2)</code></p>
+
+        <p>Maps可视为键值对的集合，键被用于定位值 在css种没有对应的概念。 和Lists不同Maps必须被圆括号包围，键值对被都好分割 。 Maps中的keys和values可以是sassscript的任何对象。（包括任意的sassscript表达式 arbitrary SassScript expressions） 和Lists一样Maps主要为sassscript函数服务，如 map-get函数用于查找键值，map-merge函数用于map和新加的键值融合，@each命令可添加样式到一个map中的每个键值对。 Maps可用于任何Lists可用的地方，在List函数中 Map会被自动转换为List ， 如 (key1: value1, key2: value2)会被List函数转换为 key1 value1, key2 value2 ，反之则不能。</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="52运算">5.2运算</h5>
+
+<p>​	SassScript 支持数字的加减乘除、取整等运算 (<code class="highlighter-rouge">+, -, *, /, %</code>)，如果必要会在不同单位间转换值。</p>
+
+<p>​	关系运算 <code class="highlighter-rouge">&lt;, &gt;, &lt;=, &gt;=</code> 也可用于数字运算，相等运算 <code class="highlighter-rouge">==, !=</code> 可用于所有数据类型。</p>
+
+<ul>
+  <li>
+    <p>除法运算</p>
+
+    <p>以下三种情况 <code class="highlighter-rouge">/</code> 将被视为除法运算符号：</p>
+
+    <ul>
+      <li>如果值，或值的一部分，是变量或者函数的返回值</li>
+      <li>如果值被圆括号包裹</li>
+      <li>如果值是算数表达式的一部分</li>
+    </ul>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">10px</span><span class="o">/</span><span class="m">8px</span><span class="p">;</span>             <span class="c1">// Plain CSS, no division</span>
+  <span class="nv">$width</span><span class="p">:</span> <span class="m">1000px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nv">$width</span><span class="o">/</span><span class="m">2</span><span class="p">;</span>            <span class="c1">// Uses a variable, does division</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="nf">round</span><span class="p">(</span><span class="m">1</span><span class="mi">.5</span><span class="p">)</span><span class="o">/</span><span class="m">2</span><span class="p">;</span>        <span class="c1">// Uses a function, does division</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="p">(</span><span class="m">500px</span><span class="o">/</span><span class="m">2</span><span class="p">);</span>          <span class="c1">// Uses parentheses, does division</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">5px</span> <span class="o">+</span> <span class="m">8px</span><span class="o">/</span><span class="m">2px</span><span class="p">;</span> <span class="c1">// Uses +, does division</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">font</span><span class="p">:</span> <span class="m">10px</span><span class="p">/</span><span class="m">8px</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="m">9px</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h4 id="颜色值运算-color-operations">颜色值运算 (Color Operations)</h4>
+
+    <p>颜色值的运算是分段计算进行的，也就是分别计算红色，绿色，以及蓝色的值：</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="mh">#010203</span> <span class="o">+</span> <span class="mh">#040506</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>计算 <code class="highlighter-rouge">01 + 04 = 05</code> <code class="highlighter-rouge">02 + 05 = 07</code> <code class="highlighter-rouge">03 + 06 = 09</code>，然后编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#050709</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h4 id="字符串运算-string-operations">字符串运算 (String Operations)</h4>
+
+    <p><code class="highlighter-rouge">+</code> 可用于连接字符串</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="n">e</span> <span class="o">+</span> <span class="o">-</span><span class="n">resize</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">e-resize</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>注意，如果有引号字符串（位于 <code class="highlighter-rouge">+</code> 左侧）连接无引号字符串，运算结果是有引号的，相反，无引号字符串（位于 <code class="highlighter-rouge">+</code> 左侧）连接有引号字符串，运算结果则没有引号。</p>
+  </li>
+  <li>
+    <h4 id="布尔运算-boolean-operations">布尔运算 (Boolean Operations)</h4>
+
+    <p>SassScript 支持布尔型的 <code class="highlighter-rouge">and</code> <code class="highlighter-rouge">or</code> 以及 <code class="highlighter-rouge">not</code> 运算。</p>
+  </li>
+</ul>
+
+<h5 id="53函数">5.3函数</h5>
+
+<p>SassScript 定义了多种函数，有些甚至可以通过普通的 CSS 语句调用：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nf">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">100%</span><span class="o">,</span> <span class="m">50%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#ff0000</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="54插值语句">5.4插值语句</h5>
+
+<p>通过 <code class="highlighter-rouge">#{}</code> 插值语句可以在选择器或属性名中使用变量：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span><span class="p">:</span> <span class="n">foo</span><span class="p">;</span>
+<span class="nv">$attr</span><span class="p">:</span> <span class="n">border</span><span class="p">;</span>
+<span class="nt">p</span><span class="nc">.</span><span class="si">#{</span><span class="nv">$name</span><span class="si">}</span> <span class="p">{</span>
+  <span class="si">#{</span><span class="nv">$attr</span><span class="si">}</span><span class="nt">-color</span><span class="nd">:</span> <span class="nt">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>编译为</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span><span class="nc">.foo</span> <span class="p">{</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="55指令">5.5@指令</h5>
+
+<ul>
+  <li>
+    <p>@import</p>
+
+    <p>Sass 拓展了 <code class="highlighter-rouge">@import</code> 的功能，允许其导入 SCSS 或 Sass 文件。被导入的文件将合并编译到同一个 CSS 文件中，另外，被导入的文件中所包含的变量或者混合指令 (mixin) 都可以在导入的文件中使用。</p>
+
+    <p>Sass 在当前地址，或 Rack, Rails, Merb 的 Sass 文件地址寻找 Sass 文件，如果需要设定其他地址，可以用 <code class="highlighter-rouge">:load_paths</code> 选项，或者在命令行中输入 <code class="highlighter-rouge">--load-path</code> 命令。</p>
+
+    <p>通常，<code class="highlighter-rouge">@import</code> 寻找 Sass 文件并将其导入，但在以下情况下，<code class="highlighter-rouge">@import</code> 仅作为普通的 CSS 语句，不会导入任何 Sass 文件。</p>
+
+    <ul>
+      <li>文件拓展名是 <code class="highlighter-rouge">.css</code>；</li>
+      <li>文件名以 <code class="highlighter-rouge">http://</code> 开头；</li>
+      <li>文件名是 <code class="highlighter-rouge">url()</code>；</li>
+      <li><code class="highlighter-rouge">@import</code> 包含 media queries。</li>
+    </ul>
+
+    <p>如果不在上述情况内，文件的拓展名是 <code class="highlighter-rouge">.scss</code> 或 <code class="highlighter-rouge">.sass</code>，则导入成功。没有指定拓展名，Sass 将会试着寻找文件名相同，拓展名为 <code class="highlighter-rouge">.scss</code> 或 <code class="highlighter-rouge">.sass</code> 的文件并将其导入。</p>
+  </li>
+</ul>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"foo.scss"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>​	Sass 允许同时导入多个文件，例如同时导入 rounded-corners 与 text-shadow 两个文件：</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span> <span class="s2">"rounded-corners"</span><span class="o">,</span> <span class="s2">"text-shadow"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h3 id="media">@media</h3>
+
+    <p>Sass 中 <code class="highlighter-rouge">@media</code> 指令与 CSS 中用法一样，只是增加了一点额外的功能：允许其在 CSS 规则中嵌套。如果 <code class="highlighter-rouge">@media</code> 嵌套在 CSS 规则内，编译时，<code class="highlighter-rouge">@media</code> 将被编译到文件的最外层，包含嵌套的父选择器。这个功能让 <code class="highlighter-rouge">@media</code> 用起来更方便，不需要重复使用选择器，也不会打乱 CSS 的书写流程。</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.sidebar</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="k">@media</span> <span class="n">screen</span> <span class="nf">and</span> <span class="p">(</span><span class="n">orientation</span><span class="o">:</span> <span class="nb">landscape</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.sidebar</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">orientation</span><span class="p">:</span> <span class="nb">landscape</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.sidebar</span> <span class="p">{</span>
+      <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="extend">@extend</h3>
+
+    <p>在设计网页的时候常常遇到这种情况：一个元素使用的样式与另一个元素完全相同，但又添加了额外的样式。通常会在 HTML 中给元素定义两个 class，一个通用样式，一个特殊样式。假设现在要设计一个普通错误样式与一个严重错误样式，一般会这样写：</p>
+
+    <pre><code class="language-markup">&lt;div class="error seriousError"&gt;
+  Oh no! You've been hacked!
+&lt;/div&gt;
+</code></pre>
+
+    <p>样式如下</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.error</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="m">#f00</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fdd</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.seriousError</span> <span class="p">{</span>
+  <span class="nl">border-width</span><span class="p">:</span> <span class="m">3px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h5 id="54控制指令-control-directives">5.4控制指令 (Control Directives)</h5>
+
+<p>SassScript 提供了一些基础的控制指令，比如在满足一定条件时引用样式，或者设定范围重复输出格式。控制指令是一种高级功能，日常编写过程中并不常用到，主要与混合指令 (mixin) 配合使用，尤其是用在 <a href="http://compass-style.org/">Compass</a> 等样式库中。</p>
+
+<ul>
+  <li>
+    <h3 id="if">@if</h3>
+
+    <p>当 <code class="highlighter-rouge">@if</code> 的表达式返回值不是 <code class="highlighter-rouge">false</code> 或者 <code class="highlighter-rouge">null</code> 时，条件成立，输出 <code class="highlighter-rouge">{}</code> 内的代码：</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="k">@if</span> <span class="m">1</span> <span class="o">+</span> <span class="m">1</span> <span class="o">==</span> <span class="m">2</span> <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">@if</span> <span class="m">5</span> <span class="o">&lt;</span> <span class="m">3</span> <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">dotted</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">@if</span> <span class="n">null</span>  <span class="p">{</span> <span class="nl">border</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">double</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="for">@for</h3>
+
+    <p><code class="highlighter-rouge">@for</code> 指令可以在限制的范围内重复输出格式，每次按要求（变量的值）对输出结果做出变动。这个指令包含两种格式：<code class="highlighter-rouge">@for $var from &lt;start&gt; through &lt;end&gt;</code>，或者 <code class="highlighter-rouge">@for $var from &lt;start&gt; to &lt;end&gt;</code>，区别在于 <code class="highlighter-rouge">through</code> 与 <code class="highlighter-rouge">to</code> 的含义：*当使用 through 时，条件范围包含 <start> 与 <end> 的值，而使用 to 时条件范围只包含 <start> 的值不包含 <end> 的值*。另外，`$var` 可以是任何变量，比如 `$i`；`<start>` 和 `<end>` 必须是整数值。</end></start></end></start></end></start></p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">3</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item-1</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.item-2</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.item-3</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">6em</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="each">@each</h3>
+
+    <p><code class="highlighter-rouge">@each</code> 指令的格式是 <code class="highlighter-rouge">$var in &lt;list&gt;</code>, <code class="highlighter-rouge">$var</code> 可以是任何变量名，比如 <code class="highlighter-rouge">$length</code> 或者 <code class="highlighter-rouge">$name</code>，而 <code class="highlighter-rouge">&lt;list&gt;</code> 是一连串的值，也就是值列表。</p>
+
+    <p><code class="highlighter-rouge">@each</code> 将变量 <code class="highlighter-rouge">$var</code> 作用于值列表中的每一个项目，然后输出结果，例如：</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@each</span> <span class="nv">$animal</span> <span class="n">in</span> <span class="n">puma</span><span class="o">,</span> <span class="n">sea-slug</span><span class="o">,</span> <span class="n">egret</span><span class="o">,</span> <span class="n">salamander</span> <span class="p">{</span>
+  <span class="nc">.</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="nc">-icon</span> <span class="p">{</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/</span><span class="si">#{</span><span class="nv">$animal</span><span class="si">}</span><span class="sx">.png')</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>编译为</p>
+
+    <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.puma-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/puma.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.sea-slug-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/sea-slug.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.egret-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/egret.png')</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.salamander-icon</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('/images/salamander.png')</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <h3 id="while">@while</h3>
+
+    <p><code class="highlighter-rouge">@while</code> 指令重复输出格式直到表达式返回结果为 <code class="highlighter-rouge">false</code>。这样可以实现比 <code class="highlighter-rouge">@for</code> 更复杂的循环，只是很少会用到。例如：</p>
+
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$i</span><span class="p">:</span> <span class="m">6</span><span class="p">;</span>
+<span class="k">@while</span> <span class="nv">$i</span> <span class="o">&gt;</span> <span class="m">0</span> <span class="p">{</span>
+  <span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">2em</span> <span class="o">*</span> <span class="nv">$i</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nv">$i</span><span class="p">:</span> <span class="nv">$i</span> <span class="o">-</span> <span class="m">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.item-6</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">12em</span><span class="p">;</span> <span class="p">}</span>
+  
+<span class="nc">.item-4</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">8em</span><span class="p">;</span> <span class="p">}</span>
+  
+<span class="nc">.item-2</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">4em</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2019/08/03/20190802%E6%97%A5%E5%BF%97/">20190802日志</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2019/08/03/sass/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/08/03/sass/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//septemberqy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             人生如梦 
+        </p>
+        <p class="contact">
+            Contact me at:  
+            <a href="mailto:ryougiking@sina.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

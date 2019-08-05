@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JSDOM</title>
+    <meta name="description" content="HTML DOM1. DOM基本介绍DOM 是 Document Object Model 文档对象模型  HTML DOM  XML DOM2. HTML DOM 对象参考  2.1 document 对象  属性….      方法见手册    2.2 form 对象  2.3 image 对象  2.4 a...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2019/07/24/JSDOM/">
+    <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">SeptemberQY</a>
+        <small>phper</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>JSDOM</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2019-07-24
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#js" title="Category: js" rel="category">js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#js" title="Tag: js" rel="tag">js</a-->
+        <a href="/tag/#js" title="Tag: js" rel="tag">js</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 id="html-dom">HTML DOM</h1>
+
+<h2 id="1-dom基本介绍">1. DOM基本介绍</h2>
+
+<p>DOM 是 Document Object Model 文档对象模型</p>
+
+<ul>
+  <li>HTML DOM</li>
+  <li>XML DOM</li>
+</ul>
+
+<h2 id="2-html-dom-对象参考">2. HTML DOM 对象参考</h2>
+
+<ul>
+  <li>2.1 document 对象</li>
+  <li>属性
+….</li>
+  <li>
+    <p>方法
+见手册</p>
+  </li>
+  <li>2.2 form 对象</li>
+  <li>2.3 image 对象</li>
+  <li>2.4 anchor 对象</li>
+  <li>2.5 base 对象</li>
+  <li>2.6 canvas 对象</li>
+  <li>2.7 Event 对象</li>
+  <li>2.8 input 系列对象</li>
+  <li>2.9 select 对象</li>
+  <li>2.10 option 对象</li>
+  <li>2.11 style 对象</li>
+  <li>2.12 table 对象</li>
+  <li>2.13 tableRow 对象</li>
+  <li>2.14 tableCell 对象
+~~~
+    <h2 id="3-xml-dom-对象">3. XML DOM 对象</h2>
+  </li>
+</ul>
+
+<h1 id="html-dom-1">HTML DOM</h1>
+
+<ul>
+  <li>2.2 form 对象</li>
+  <li>2.3 image 对象</li>
+  <li>2.4 anchor 对象</li>
+  <li>2.5 base 对象</li>
+  <li>2.6 canvas 对象</li>
+  <li>2.7 Event 对象</li>
+  <li>2.8 input 系列对象
+    <ul>
+      <li>focus()  获焦</li>
+      <li>blur()   失焦</li>
+      <li>select()  选中</li>
+    </ul>
+  </li>
+  <li>2.9 select 对象</li>
+  <li>2.10 option 对象</li>
+  <li>2.11 style 对象</li>
+  <li>2.12 table 对象</li>
+  <li>2.13 tableRow 对象</li>
+  <li>2.14 tableCell 对象</li>
+</ul>
+
+<hr />
+
+<h1 id="节点操作-xml-dom">节点操作 (XML DOM)</h1>
+
+<h2 id="xml-dom-节点">XML DOM 节点</h2>
+
+<h3 id="1节点介绍">1.节点介绍</h3>
+
+<ul>
+  <li>1.1 什么是节点 node
+HTML文档中 所有的组成部分 都称之为节点
+    <ul>
+      <li>document 文档</li>
+      <li>element  元素</li>
+      <li>attr     属性</li>
+      <li>text     文本</li>
+      <li>comment  注释</li>
+    </ul>
+  </li>
+  <li>
+    <p>1.2 节点树
+子节点
+父节点
+同辈节点
+后代节点
+先辈节点</p>
+  </li>
+  <li>1.3 节点的访问
+    <ul>
+      <li>得到节点
+        <ul>
+          <li>document 直接 document</li>
+          <li>element  getId/getTagName..</li>
+          <li>attr     element.getAttributeNode(‘attrname’)</li>
+          <li>text     子节点</li>
+          <li>comment  子节点</li>
+        </ul>
+      </li>
+      <li>获取子节点         childNodes</li>
+      <li>获取子元素节点     children</li>
+      <li>获取第一个子节点    firstChild</li>
+      <li>获取最后一个子节点  lastChild</li>
+      <li>获取父节点          parentNode</li>
+      <li>获取父元素节点      parentElement</li>
+      <li>获取前一个节点      previousSibling</li>
+      <li>获取后一个节点      nextSibling</li>
+    </ul>
+  </li>
+  <li>1.4 节点属性
+nodeName
+    documnet:   #document
+    element:    标签名
+    attr:       属性名
+    text:       #text
+    comment:    #comment
+nodeValue
+    document:  null
+    element:   null
+    attr:      属性值
+    text:      文本内容
+    注释:      注释内容
+nodeType
+    document:  9
+    element:   1
+    attr:      2
+    text:      3
+    commnet:   8</li>
+</ul>
+
+<h3 id="2节点操作">2.节点操作</h3>
+
+<p>2.1 获取节点
+    element:    ID/TAGNAME/子节点/父节点/同辈
+    attr:       element.getAttributeNode()  属性节点
+                element.getAttribute()  属性值
+                element.attr 属性值</p>
+
+<p>2.2 改变节点(改变节点的值) nodeValue
+2.3 删除节点
+2.4 替换节点
+2.5 插入节点
+2.6 创建节点
+2.7 克隆节点</p>
+
+<h3 id="3-xml-对象">3. XML 对象</h3>
+
+<ul>
+  <li>node</li>
+  <li>nodeList</li>
+  <li>document</li>
+  <li>element</li>
+  <li>attr</li>
+  <li>text</li>
+  <li>comment</li>
+</ul>
+
+<h3 id="4-htmlelement对象">4. HTMLElement对象</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>className   类名
+
+scrollLeft  滚动条至 左边界像素
+scrollTop   滚动条至 上边界像素
+
+offsetLeft  距离已定位父元素的 左偏移量
+offsetTop   距离已定位父元素的 上偏移量
+
+innerHTML   元素内部的内容(不含标签)
+innerText   元素内部所有的文本内容
+outerHTML   元素的内容(含标签)
+
+offsetWidth  盒子模型,实际的宽: 内容+内边距+边框
+offsetHeight  盒子模型,实际的高: 内容+内边距+边框
+
+clientWidth  宽 + 内边距
+clientHeight 高 + 内边距
+
+scrollWidth  宽 + 内边距 + 计算里面元素的大小
+scrollHeight 高 + 内边距 + 计算里面元素的大小
+
+document.documentElement.clientHeight  视口高度
+document.documentElement.scrollHeight  文档高度
+</code></pre></div></div>
+
+<h1 id="ps-补充">PS. 补充</h1>
+
+<ul>
+  <li>PS1. DOM 元素对象的 属性和方法
+http://www.runoob.com/jsref/dom-obj-all.html</li>
+  <li>PS2. MDN文档
+    <ul>
+      <li>Mozilla 开发者社区(MDN):
+https://developer.mozilla.org/zh-CN/</li>
+      <li>JavaScript MDN文档
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript</li>
+    </ul>
+  </li>
+</ul>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2019/07/24/JSBOM/">JSBOM</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2019/07/24/JS%E4%BA%8B%E4%BB%B6/">JS事件</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2019/07/24/JSDOM/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/24/JSDOM/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//septemberqy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             人生如梦 
+        </p>
+        <p class="contact">
+            Contact me at:  
+            <a href="mailto:ryougiking@sina.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>

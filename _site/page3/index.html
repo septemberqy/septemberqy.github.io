@@ -82,6 +82,10 @@
                 
                     
                 
+                    
+                
+                    
+                
             </ul>
         </nav>
     </div>
@@ -95,14 +99,13 @@
         <hr>
         <ul>
             
-				
               <li>
                 <h2>
-                  <a class="post-link" href="/2019/07/17/%E6%97%A5%E8%AE%B0/">日记</a>
+                  <a class="post-link" href="/2019/07/24/JS%E4%BA%8B%E4%BB%B6/">JS事件</a>
                 </h2>
                 <div class="label">
                     <div class="label-card">
-                        <i class="fa fa-calendar"></i>2019-07-17
+                        <i class="fa fa-calendar"></i>2019-07-24
                     </div>
                     <div class="label-card">
                         
@@ -114,6 +117,18 @@
                     <div class="label-card">
                     
 
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#js" title="Category: js" rel="category">js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
 
 
                     </div>
@@ -125,6 +140,8 @@
   <i class="fa fa-tags"></i>
   
     
+        <a href="/tag/#js" title="Tag: js" rel="tag">js</a>
+    
   
 
 </span>
@@ -132,27 +149,420 @@
                     </div>
                 </div>
                 <div class="excerpt">
-                    <h2 id="20190717">20190717</h2>
+                    <h1 id="javascript-事件">JavaScript 事件</h1>
 
-<h3 id="安装ubuntu系统等准备操作">安装Ubuntu系统等准备操作</h3>
+<h3 id="1-事件的绑定">1. 事件的绑定</h3>
+<ul>
+  <li>事件作为 元素的属性
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">event</span><span class="o">=</span><span class="dl">"</span><span class="s2">JS CODE</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div>    </div>
+  </li>
+  <li>事件作为 元素对象的属性
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">element</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){}</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="nx">funName</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>事件监听(标准)
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="err">非</span><span class="nx">IE</span><span class="p">:</span>
+      <span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">事件名字</span><span class="dl">'</span><span class="p">,</span> <span class="nx">funName</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="nl">IE</span><span class="p">:</span>
+      <span class="nx">attachEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">事件名字</span><span class="dl">'</span><span class="p">,</span> <span class="nx">funName</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/24/JS%E4%BA%8B%E4%BB%B6/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/24/JSDOM/">JSDOM</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-24
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#js" title="Category: js" rel="category">js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#js" title="Tag: js" rel="tag">js</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="html-dom">HTML DOM</h1>
+
+<h2 id="1-dom基本介绍">1. DOM基本介绍</h2>
+
+<p>DOM 是 Document Object Model 文档对象模型</p>
+
+<ul>
+  <li>HTML DOM</li>
+  <li>XML DOM</li>
+</ul>
+
+<h2 id="2-html-dom-对象参考">2. HTML DOM 对象参考</h2>
+
+<ul>
+  <li>2.1 document 对象</li>
+  <li>属性
+….</li>
+  <li>
+    <p>方法
+见手册</p>
+  </li>
+  <li>2.2 form 对象</li>
+  <li>2.3 image 对象</li>
+  <li>2.4 anchor 对象</li>
+  <li>2.5 base 对象</li>
+  <li>2.6 canvas 对象</li>
+  <li>2.7 Event 对象</li>
+  <li>2.8 input 系列对象</li>
+  <li>2.9 select 对象</li>
+  <li>2.10 option 对象</li>
+  <li>2.11 style 对象</li>
+  <li>2.12 table 对象</li>
+  <li>2.13 tableRow 对象</li>
+  <li>2.14 tableCell 对象</li>
+</ul>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/24/JSDOM/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/24/JSBOM/">JSBOM</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-24
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#js" title="Category: js" rel="category">js</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#js" title="Tag: js" rel="tag">js</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="bom">BOM</h1>
+
+<h3 id="1-什么是bom">1. 什么是BOM</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Browser Object Model  浏览器对象模型
+</code></pre></div></div>
+
+<h3 id="2-javascript-对象层次">2. JavaScript 对象层次</h3>
+
+<h4 id="21-对象种类">2.1 对象种类</h4>
+
+<ul>
+  <li>自定义对象 Object</li>
+  <li>内置对象  A/S/B/N/D/M/R/G</li>
+  <li>BOM 浏览器对象模型</li>
+  <li>DOM Document Object Model  文档对象模型</li>
+</ul>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/24/JSBOM/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/24/20190723/">20190723日志</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-24
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#日志" title="Category: 日志" rel="category">日志</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#日志" title="Tag: 日志" rel="tag">日志</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="20190723">20190723</h3>
 
 <ol>
-  <li>安装ubuntu环境</li>
-  <li>安装git,vim,chrom,typora软件</li>
-  <li>申请github账号</li>
-  <li>开通username.github.io</li>
-  <li>安装ruby环境</li>
-  <li>安装jekyll环境</li>
+  <li>添加聊天室进入退出通知</li>
+  <li>js打印图形</li>
 </ol>
 
 
                 </div>
                 <div class="read-all">
-                    <a  href="/2019/07/17/%E6%97%A5%E8%AE%B0/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                    <a  href="/2019/07/24/20190723/"><i class="fa fa-newspaper-o"></i>Read All</a>
                 </div>
                 <hr>
               </li>
-			
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/">nodejs学习笔记</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-24
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#nodejs" title="Category: nodejs" rel="category">nodejs</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#nodejs" title="Tag: nodejs" rel="tag">nodejs</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h2 id="nodejs笔记篇">Nodejs笔记篇</h2>
+
+<h3 id="1关于-nodejs">1.关于 Node.js</h3>
+
+<p>​	Node.js是一个让JavaScript运行在服务器端的开发平台.</p>
+
+<h4 id="11-介绍">1.1 介绍</h4>
+
+<ol>
+  <li>
+    <p>node.js 不是一种独立的语言,与PHP,JSP,PYTHON,PERL,RUBY的既是语言，也是平台不同,node.js使用javascript进行编成,运行在javascript引擎上(V8)</p>
+  </li>
+  <li>
+    <p>与PHP,JSP等相比，Nodejs跳过了Apache,Nginx,ISS等HTTP服务器,它自己不用建设在任何服务器软件之上.nodejs的许多谁就理念与经典架构LANP有着很大的不同,可以提供强大的伸缩能力</p>
+
+    <p>linux apache/nginx mysql php</p>
+
+    <p>linux nodejs mongodb mysql nodejs本身就是服务器  js作为后端语言</p>
+  </li>
+</ol>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2019/07/23/20190722%E6%97%A5%E5%BF%97/">20190722日志</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2019-07-23
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#日志" title="Category: 日志" rel="category">日志</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#日志" title="Tag: 日志" rel="tag">日志</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h3 id="20190722">20190722</h3>
+
+<h3 id="1nodejs聊天室服务器端客户端">1.nodejs聊天室服务器端,客户端</h3>
+
+<h3 id="2准备技术分享相关内容">2.准备技术分享相关内容</h3>
+
+<ul>
+  <li>安装LNMP环境</li>
+  <li>安装ruby环境</li>
+  <li>查找相关资料</li>
+  <li>准备PPT</li>
+</ul>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2019/07/23/20190722%E6%97%A5%E5%BF%97/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
         </ul>
 
@@ -164,10 +574,10 @@
             <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
             <a href="/page2" class="previous"><i class="fa fa-angle-left"></i></a>
           
-          <span class="page_number ">3/3</span>
+          <span class="page_number ">3/5</span>
           
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+            <a href="/page4" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page5" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -181,25 +591,25 @@
                 </div>
                 <ul class="content-ul" recent>
                     
-                        <li><a href="/2019/07/24/20190723/">20190723日志</a></li>
+                        <li><a href="/2019/08/03/sass/">SASS</a></li>
                     
-                        <li><a href="/2019/07/24/Nodejs%E7%AC%94%E8%AE%B0%E7%AF%87/">nodejs学习笔记</a></li>
+                        <li><a href="/2019/08/03/20190802%E6%97%A5%E5%BF%97/">20190802日志</a></li>
                     
-                        <li><a href="/2019/07/23/20190722%E6%97%A5%E5%BF%97/">20190722日志</a></li>
+                        <li><a href="/2019/08/02/20190801%E6%97%A5%E5%BF%97/">20190801日志</a></li>
                     
-                        <li><a href="/2019/07/23/nodejs%E8%81%8A%E5%A4%A9%E5%AE%A4/">nodejs聊天室</a></li>
+                        <li><a href="/2019/08/01/20190731%E6%97%A5%E5%BF%97/">20190731日志</a></li>
                     
-                        <li><a href="/2019/07/22/20190721%E6%97%A5%E5%BF%97/">20190721日志</a></li>
+                        <li><a href="/2019/07/30/HTML%E6%A0%87%E7%AD%BE/">HTML标签</a></li>
                     
-                        <li><a href="/2019/07/19/%E6%97%A5%E5%BF%97/">日志</a></li>
+                        <li><a href="/2019/07/30/CSS%E6%A0%87%E7%AD%BE/">CSS标签</a></li>
                     
-                        <li><a href="/2019/07/19/C%E8%AF%AD%E8%A8%80/">C语言</a></li>
+                        <li><a href="/2019/07/30/20190729%E6%97%A5%E5%BF%97/">20190729日志</a></li>
                     
-                        <li><a href="/2019/07/19/C%E6%8C%87%E9%92%88/">C指针</a></li>
+                        <li><a href="/2019/07/30/%E9%98%BB%E6%AD%A2JS%E5%86%92%E6%B3%A1/">阻止js冒泡</a></li>
                     
-                        <li><a href="/2019/07/19/20190719%E6%97%A5%E5%BF%97/">20190719日志</a></li>
+                        <li><a href="/2019/07/27/20190726%E6%97%A5%E5%BF%97/">20190726日志</a></li>
                     
-                        <li><a href="/2019/07/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">Markdown 相关技术</a></li>
+                        <li><a href="/2019/07/25/JS_AJAX/"> AJAX</a></li>
                     
                 </ul>
             </div>
@@ -244,7 +654,7 @@
                             <span class="name">
                                 日志
                             </span>
-                            <span class="badge">3</span>
+                            <span class="badge">10</span>
                         </a>
                     </li>
                     
@@ -254,6 +664,42 @@
                                 nodejs
                             </span>
                             <span class="badge">2</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#js" class="categories-list-item" cate="js">
+                            <span class="name">
+                                js
+                            </span>
+                            <span class="badge">4</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#CSS" class="categories-list-item" cate="CSS">
+                            <span class="name">
+                                CSS
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#HTML" class="categories-list-item" cate="HTML">
+                            <span class="name">
+                                HTML
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#SASS" class="categories-list-item" cate="SASS">
+                            <span class="name">
+                                SASS
+                            </span>
+                            <span class="badge">1</span>
                         </a>
                     </li>
                     
@@ -314,7 +760,42 @@
                       
                       
                       
-                      <a href="/tag/#nodejs" style="font-size: 13.5pt; color: #444;">nodejs</a>
+                      <a href="/tag/#nodejs" style="font-size: 10pt; color: #888;">nodejs</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#js" style="font-size: 11pt; color: #777;">js</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#AJAX" style="font-size: 9pt; color: #999;">AJAX</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#CSS" style="font-size: 9pt; color: #999;">CSS</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#HTML" style="font-size: 9pt; color: #999;">HTML</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#SASS" style="font-size: 9pt; color: #999;">SASS</a>
                     
                 </div>
             </div>

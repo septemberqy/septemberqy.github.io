@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSS标签</title>
+    <meta name="description" content="      动画属性（Animation）                  @keyframes        通过 @keyframes 规则，您能够创建动画。        创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。        在动画过程中，您能够多次改变这套 CSS 样式。     ...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2019/07/30/CSS%E6%A0%87%E7%AD%BE/">
+    <link rel="alternate" type="application/rss+xml" title="SeptemberQY" href="http://localhost:4000/feed.xml ">
+
+
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">SeptemberQY</a>
+        <small>phper</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>CSS标签</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2019-07-30
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#CSS" title="Category: CSS" rel="category">CSS</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#CSS" title="Tag: CSS" rel="tag">CSS</a-->
+        <a href="/tag/#CSS" title="Tag: CSS" rel="tag">CSS</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul>
+  <li>
+    <h2 id="动画属性animation">动画属性（Animation）</h2>
+
+    <ul>
+      <li>
+        <p>@keyframes</p>
+
+        <p>通过 @keyframes 规则，您能够创建动画。</p>
+
+        <p>创建动画的原理是，将一套 CSS 样式逐渐变化为另一套样式。</p>
+
+        <p>在动画过程中，您能够多次改变这套 CSS 样式。</p>
+
+        <p>以百分比来规定改变发生的时间，或者通过关键词 “from” 和 “to”，等价于 0% 和 100%。</p>
+
+        <p>0% 是动画的开始时间，100% 动画的结束时间。</p>
+
+        <p>为了获得最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@keyframes animationname {keyframes-selector {css-styles;}}
+</code></pre></div>        </div>
+
+        <ul>
+          <li>
+            <p>animationname	必需。定义动画的名称。</p>
+          </li>
+          <li>
+            <p>keyframes-selector   必需。动画时长的百分比。</p>
+
+            <p>合法的值：</p>
+
+            <ul>
+              <li>0-100%</li>
+              <li>from（与 0% 相同）</li>
+              <li>to（与 100% 相同）</li>
+            </ul>
+          </li>
+          <li>
+            <p><em>css-styles</em>   必需。一个或多个合法的 CSS 样式属性。</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>~~~</p>
+
+<ul>
+  <li>
+    <h1 id="animation-属性">animation 属性</h1>
+
+    <ul>
+      <li>
+        <p>animation-name 属性为 @keyframes 动画规定名称。</p>
+      </li>
+      <li>
+        <p>animation-duration 属性定义动画完成一个周期所需要的时间，以秒或毫秒计。</p>
+      </li>
+      <li>
+        <p>animation-timing-function 规定动画的速度曲线。</p>
+
+        <p>速度曲线定义动画从一套 CSS 样式变为另一套所用的时间。</p>
+
+        <p>速度曲线用于使变化更为平滑。</p>
+      </li>
+      <li>
+        <p>animation-delay 属性定义动画何时开始。</p>
+
+        <p>animation-delay 值以秒或毫秒计。</p>
+
+        <p><strong>提示：</strong>允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画。</p>
+      </li>
+      <li>
+        <p>animation-iteration-count 属性定义动画的播放次数。</p>
+      </li>
+      <li>
+        <p>animation-direction 属性定义是否应该轮流反向播放动画。</p>
+
+        <p>如果 animation-direction 值是 “alternate”，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）向后播放。</p>
+
+        <p><strong>注释：</strong>如果把动画设置为只播放一次，则该属性没有效果。</p>
+      </li>
+      <li>
+        <p>animation-play-state 属性规定动画正在运行还是暂停。</p>
+      </li>
+      <li>
+        <p>animation-fill-mode 属性规定动画在播放之前或之后，其动画效果是否可见。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="background-属性">background 属性</h1>
+
+    <ul>
+      <li>
+        <p>background-color 属性设置元素的背景颜色。</p>
+      </li>
+      <li>
+        <p>background-position 属性设置背景图像的起始位置。</p>
+      </li>
+      <li>
+        <p>background-size 属性规定背景图像的尺寸。</p>
+      </li>
+      <li>
+        <p>background-repeat 属性设置是否及如何重复背景图像。</p>
+
+        <p>默认地，背景图像在水平和垂直方向上重复。</p>
+      </li>
+      <li>
+        <p>background-origin 属性规定 background-position 属性相对于什么位置来定位。</p>
+
+        <p><strong>注释：</strong>如果背景图像的 background-attachment 属性为 “fixed”，则该属性没有效果。</p>
+      </li>
+      <li>
+        <p>background-clip 属性规定背景的绘制区域。</p>
+      </li>
+      <li>
+        <p>background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动。</p>
+      </li>
+      <li>
+        <p>background-image 属性为元素设置背景图像。</p>
+
+        <p>元素的背景占据了元素的全部尺寸，包括内边距和边框，但不包括外边距。</p>
+
+        <p>默认地，背景图像位于元素的左上角，并在水平和垂直方向上重复。</p>
+
+        <p><strong>提示：</strong>请设置一种可用的背景颜色，这样的话，假如背景图像不可用，页面也可获得良好的视觉效果。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="border-属性">border 属性</h1>
+
+    <ul>
+      <li>
+        <p>border-width  边框粗细</p>
+      </li>
+      <li>
+        <p>border-style    边框类型</p>
+      </li>
+      <li>
+        <p>border-color   边框颜色</p>
+      </li>
+      <li>
+        <p>border-image 属性是一个简写属性，用于设置以下属性：</p>
+
+        <ul>
+          <li>border-image-source   属性规定要使用的图像，代替 border-style 属性中设置的边框样式。</li>
+          <li>border-image-slice  规定图像边框的向内偏移：</li>
+          <li>border-image-width  属性规定图像边框的宽度。</li>
+          <li>border-image-outset  规定边框图像区域超出边框的量。</li>
+          <li>border-image-repeat  图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。</li>
+        </ul>
+      </li>
+      <li>
+        <p>border-radius</p>
+
+        <ul>
+          <li>border-bottom-left-radius 属性定义左下角边框的形状。</li>
+          <li>border-bottom-right-radius 属性定义右下角边框的形状。</li>
+          <li>border-top-left-radius 属性定义左上角边框的形状。</li>
+          <li>border-top-right-radius 属性定义右下角边框的形状。</li>
+        </ul>
+      </li>
+      <li>
+        <p>box-shadow 属性向框添加一个或多个阴影。</p>
+
+        <p>box-shadow h-shadow v-shadow blur spread color inset;</p>
+
+        <ul>
+          <li>h-shadow  必需。水平阴影的位置。允许负值。</li>
+          <li>v-shadow  必需。垂直阴影的位置。允许负值。</li>
+          <li>blur  可选。模糊距离。</li>
+          <li>spread  可选。阴影的尺寸。</li>
+          <li>color   可选。阴影的颜色。请参阅 CSS 颜色值。</li>
+          <li>inset   可选。将外部阴影 (outset) 改为内部阴影。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="box-属性">Box 属性</h2>
+
+    <ul>
+      <li>
+        <p>overflow-x 属性规定是否对内容的左/右边缘进行裁剪 - 如果溢出元素内容区域的话。</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>overflow-x  visible</td>
+              <td>hidden</td>
+              <td>scroll</td>
+              <td>auto</td>
+              <td>no-display</td>
+              <td>no-content;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>visible   不裁剪内容，可能会显示在内容框之外。</li>
+          <li>hidden  裁剪内容 - 不提供滚动机制。</li>
+          <li>scroll      裁剪内容 - 提供滚动机制。</li>
+          <li>auto       如果溢出框，则应该提供滚动机制。</li>
+          <li>no-display  如果内容不适合内容框，则删除整个框。</li>
+          <li>no-content  如果内容不适合内容框，则隐藏整个内容。</li>
+        </ul>
+      </li>
+      <li>
+        <p>overflow-y 同上</p>
+      </li>
+      <li>
+        <p>overflow-style 规定溢出元素的首选滚动方法。</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>overflow-style    auto</td>
+              <td>scrollbar</td>
+              <td>panner</td>
+              <td>move</td>
+              <td>marquee;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>scrollbar    为溢出元素添加滚动条。</li>
+          <li>move    用户能够直接移动元素的内容。通常，用户能够用鼠标拖动内容。</li>
+          <li>marquee   内容自主移动，不需任何用户代理对其控制。</li>
+        </ul>
+      </li>
+      <li>
+        <p>rotation 属性围绕由 <a href="https://www.w3school.com.cn/cssref/pr_rotation-point.asp">rotation-point</a> 属性定义的指定点，对块级元素进行逆时针旋转。</p>
+
+        <ul>
+          <li>angle 元素旋转角度。可能的值：0deg 到 360deg。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="color-属性">Color 属性</h2>
+
+    <ul>
+      <li>opacity 属性设置元素的不透明级别。</li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="尺寸属性">尺寸属性</h2>
+
+    <ul>
+      <li>height 属性设置元素的高度。</li>
+      <li>max-height 属性设置元素的最大高度。</li>
+      <li>max-width 定义元素的最大宽度。</li>
+      <li>min-height 属性设置元素的最小高度。</li>
+      <li>min-width 属性设置元素的最小宽度。</li>
+      <li>width 属性设置元素的宽度。</li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="可伸缩框属性">可伸缩框属性</h2>
+
+    <ul>
+      <li>
+        <p>box-align 属性规定如何对齐框的子元素。</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>box-align start</td>
+              <td>end</td>
+              <td>center</td>
+              <td>baseline</td>
+              <td>stretch;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>
+            <p>start  对于正常方向的框，每个子元素的上边缘沿着框的顶边放置。</p>
+
+            <p>​		  对于反方向的框，每个子元素的下边缘沿着框的底边放置。</p>
+          </li>
+          <li>
+            <p>end   对于正常方向的框，每个子元素的下边缘沿着框的底边放置。</p>
+
+            <p>​		  对于反方向的框，每个子元素的上边缘沿着框的顶边放置。</p>
+          </li>
+          <li>
+            <p>center  均等地分割多余的空间，一半位于子元素之上，另一半位于子元素之下。</p>
+          </li>
+          <li>
+            <p>baseline 如果 box-orient 是inline-axis或horizontal，所有子元素均与其基线对齐。</p>
+          </li>
+          <li>
+            <p>stretch  拉伸子元素以填充包含块</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>box-direction 属性规定框元素的子元素以什么方向来排列。</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>box-direction  normal</td>
+              <td>reverse</td>
+              <td>inherit;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul>
+          <li>normal    以默认方向显示子元素。</li>
+          <li>reverse    以反方向显示子元素。</li>
+        </ul>
+      </li>
+      <li>
+        <p>box-flex 属性规定框的子元素是否可伸缩其尺寸。</p>
+      </li>
+      <li>
+        <p>box-flex-group 属性用于向柔性分组分配可伸缩元素。</p>
+      </li>
+      <li>
+        <p>box-lines 属性规定如果列超出了父框中的空间，是否要换行显示。</p>
+      </li>
+      <li>
+        <p>box-ordinal-group 属性规定框中子元素的显示次序。</p>
+
+        <p>值更低的元素会显示在值更高的元素前面显示。</p>
+      </li>
+      <li>
+        <p>box-orient 属性规定框的子元素应该被水平或垂直排列。</p>
+      </li>
+      <li>
+        <p>box-pack 属性规定当框大于子元素的尺寸，在何处放置子元素。</p>
+
+        <p>该属性规定水平框中的水平位置，以及垂直框中的垂直位置。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="font-属性">font 属性</h1>
+
+    <ul>
+      <li>
+        <p>font-style 属性定义字体的风格。</p>
+      </li>
+      <li>
+        <p>font-variant  属性设置小型大写字母的字体显示文本，这意味着所有的小写字母均会被转换为大写，但是所有使用小型大写字体的字母与其余文本相比，其字体尺寸更小。</p>
+      </li>
+      <li>
+        <p>font-weight   属性设置文本的粗细。</p>
+      </li>
+      <li>
+        <p>font-size  属性可设置字体的尺寸。</p>
+      </li>
+      <li>
+        <p>line-height 规定字体行高</p>
+      </li>
+      <li>
+        <p>font-family 规定元素的字体系列。</p>
+
+        <p>font-family 可以把多个字体名称作为一个“回退”系统来保存。如果浏览器不支持第一个字体，则会尝试下一个。也就是说，font-family 属性的值是用于某个元素的字体族名称或/及类族名称的一个优先表。浏览器会使用它可识别的第一个值。</p>
+
+        <p>有两种类型的字体系列名称：</p>
+
+        <ul>
+          <li>指定的系列名称：具体字体的名称，比如：”times”、”courier”、”arial”。</li>
+          <li>通常字体系列名称：比如：”serif”、”sans-serif”、”cursive”、”fantasy”、”monospace”</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="内容生成">内容生成</h2>
+
+    <ul>
+      <li>
+        <p>content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容。</p>
+      </li>
+      <li>
+        <p>counter-increment 属性设置某个选取器每次出现的计数器增量。默认增量是 1。</p>
+      </li>
+      <li>
+        <p>counter-reset 属性设置某个选择器出现次数的计数器的值。默认为 0。</p>
+
+        <p>利用这个属性，计数器可以设置或重置为任何值，可以是正值或负值。如果没有提供 number，则默认为 0。</p>
+      </li>
+      <li>
+        <p>quotes 属性设置嵌套引用（embedded quotation）的引号类型。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="grid-属性">Grid 属性</h2>
+
+    <ul>
+      <li>grid-columns 属性网格中每列的宽度。</li>
+      <li>grid-rows 属性规定网格中每行的高度。</li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="hyperlink-属性">Hyperlink 属性</h2>
+
+    <ul>
+      <li>
+        <p>target 属性是一个简写属性，用于设置以下属性：</p>
+
+        <ul>
+          <li>
+            <p>target-name</p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <td>target-name current</td>
+                  <td>root</td>
+                  <td>parent</td>
+                  <td>new</td>
+                  <td>modal</td>
+                  <td>name;</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <ul>
+              <li>
+                <p>current   在链接所在的框架、标签页或窗口中打开超链接。</p>
+              </li>
+              <li>
+                <p>root  在当前标签页或窗口中超链接。</p>
+              </li>
+              <li>
+                <p>parent  在父框架中打开超链接。如果当前框架没有父框架，则将该值视作 root。</p>
+              </li>
+              <li>
+                <p>new  创建新的目的地</p>
+              </li>
+              <li>
+                <p>modal  在新的（暂时创建的）模态窗口中打开新窗口。</p>
+              </li>
+              <li>
+                <p>name 在已有框架、窗口或标签页中打开链接。</p>
+
+                <p>如果 name 目的地不存在，则用该名称创建新的目的地。</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>target-position 属性规定在何处放置新的目的地链接。s</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="列表属性">列表属性</h2>
+
+    <ul>
+      <li>list-style 简写属性在一个声明中设置所有的列表属性。
+        <ul>
+          <li>list-style-type 属性设置列表项标记的类型。</li>
+          <li>list-style-position  属性设置在何处放置列表项标记。</li>
+          <li>list-style-image 属性使用图像来替换列表项的标记。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="margin-属性">margin 属性</h1>
+
+    <ul>
+      <li>margin 简写属性在一个声明中设置所有外边距属性。该属性可以有 1 到 4 个值。
+        <ul>
+          <li>4个值   上 右 下 左</li>
+          <li>3个值   上 左右 下</li>
+          <li>2个值   上下    左右</li>
+          <li>1个值   上下左右</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="padding-属性">padding 属性</h1>
+
+    <p>同margin</p>
+  </li>
+  <li>
+    <h2 id="多列属性">多列属性</h2>
+
+    <ul>
+      <li>
+        <p>column-count 属性规定元素应该被划分的列数。</p>
+      </li>
+      <li>
+        <p>column-fill 属性规定如何填充列（是否进行协调）。</p>
+      </li>
+      <li>
+        <p>column-gap 属性规定列之间的间隔。</p>
+      </li>
+      <li>
+        <p>column-rule 属性是一个简写属性，用于设置所有 column-rule-* 属性。</p>
+
+        <p>column-rule 属性设置列只觉得宽度、样式和颜色规则。</p>
+      </li>
+      <li>
+        <p>column-rule-color 属性规定列之间的颜色规则。</p>
+      </li>
+      <li>
+        <p>column-rule-style 属性规定列之间的样式规则。</p>
+      </li>
+      <li>
+        <p>column-rule-width 属性规定列之间的宽度规则。</p>
+      </li>
+      <li>
+        <p>column-span 属性规定元素应横跨多少列。</p>
+      </li>
+      <li>
+        <p>column-width 属性规定列的宽度。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="定位属性">定位属性</h2>
+
+    <ul>
+      <li>
+        <p>bottom 属性规定元素的底部边缘。该属性定义了定位元素下外边距边界与其包含块下边界之间的偏移</p>
+      </li>
+      <li>
+        <p>clear 属性规定元素的哪一侧不允许其他浮动元素。</p>
+      </li>
+      <li>
+        <p>clip 属性剪裁绝对定位元素。</p>
+      </li>
+      <li>
+        <p>cursor 属性规定要显示的光标的类型（形状）。</p>
+      </li>
+      <li>
+        <p>display 属性规定元素应该生成的框的类型。</p>
+      </li>
+      <li>
+        <p>float 属性定义元素在哪个方向浮动。以往这个属性总应用于图像，使文本围绕在图像周围，不过在 CSS 中，任何元素都可以浮动。浮动元素会生成一个块级框，而不论它本身是何种元素。</p>
+
+        <p>如果浮动非替换元素，则要指定一个明确的宽度；否则，它们会尽可能地窄。</p>
+      </li>
+      <li>
+        <p>left 属性规定元素的左边缘。该属性定义了定位元素左外边距边界与其包含块左边界之间的偏移。</p>
+      </li>
+      <li>
+        <p>overflow 属性规定当内容溢出元素框时发生的事情。</p>
+      </li>
+      <li>
+        <p>position 属性规定元素的定位类型。</p>
+      </li>
+      <li>
+        <p>right 属性规定元素的右边缘。该属性定义了定位元素右外边距边界与其包含块右边界之间的偏移。</p>
+      </li>
+      <li>
+        <p>top 属性规定元素的顶部边缘。该属性定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。</p>
+      </li>
+      <li>
+        <p>vertical-align 属性设置元素的垂直对齐方式。</p>
+      </li>
+      <li>
+        <p>visibility 属性规定元素是否可见。</p>
+      </li>
+      <li>
+        <p>z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="表格属性">表格属性</h2>
+
+    <ul>
+      <li>border-collapse 属性设置表格的边框是否被合并为一个单一的边框，还是象在标准的 HTML 中那样分开显示。</li>
+      <li>border-spacing 属性设置相邻单元格的边框间的距离（仅用于“边框分离”模式）。</li>
+      <li>caption-side 属性设置表格标题的位置。</li>
+      <li>empty-cells 属性设置是否显示表格中的空单元格（仅用于“分离边框”模式）。</li>
+      <li>tableLayout 属性用来显示表格单元格、行、列的算法规则。</li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="文本属性">文本属性</h2>
+
+    <ul>
+      <li>
+        <p>color 属性规定文本的颜色。</p>
+
+        <p>这个属性设置了一个元素的前景色（在 HTML 表现中，就是元素文本的颜色）；光栅图像不受 color 影响。这个颜色还会应用到元素的所有边框，除非被 border-color 或另外某个边框颜色属性覆盖。</p>
+
+        <p>要设置一个元素的前景色，最容易的方法是使用 color 属性。</p>
+      </li>
+      <li>
+        <p>direction 属性规定文本的方向 / 书写方向。</p>
+
+        <p>该属性指定了块的基本书写方向，以及针对 Unicode 双向算法的嵌入和覆盖方向。不支持双向文本的用户代理可以忽略这个属性。</p>
+      </li>
+      <li>
+        <p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
+
+        <p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。</p>
+      </li>
+      <li>
+        <p>line-height 属性设置行间的距离（行高）。</p>
+      </li>
+      <li>
+        <p>text-align 属性规定元素中的文本的水平对齐方式。</p>
+
+        <p>该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。</p>
+      </li>
+      <li>
+        <p>text-decoration 属性规定添加到文本的修饰。</p>
+      </li>
+      <li>
+        <p>text-indent 属性规定文本块中首行文本的缩进。</p>
+      </li>
+      <li>
+        <p>text-transform 属性控制文本的大小写。</p>
+      </li>
+      <li>
+        <p><em>unicode-bidi</em>  属性设置文本的方向。</p>
+      </li>
+      <li>
+        <p>white-space 属性设置如何处理元素内的空白。</p>
+      </li>
+      <li>
+        <p>word-spacing 属性增加或减少单词间的空白（即字间隔）。</p>
+
+        <p>该属性定义元素中字之间插入多少空白符。针对这个属性，“字” 定义为由空白符包围的一个字符串。如果指定为长度值，会调整字之间的通常间隔；所以，normal 就等同于设置为 0。允许指定负长度值，这会让字之间挤得更紧。</p>
+      </li>
+      <li>
+        <p>hanging-punctuation 属性规定把标点符号放在文本整行的开头还是结尾的行框之外。</p>
+      </li>
+      <li>
+        <p>punctuation-trim 属性规定如果标点位于行开头或结尾处，或者临近另一个全角标点符号，是否对标点符号进行修剪。</p>
+      </li>
+      <li>
+        <p>text-emphasis 属性是简写属性，用于在一个声明中设置 text-emphasis-style 和 text-emphasis-color。</p>
+      </li>
+      <li>
+        <p>text-justify 属性规定当 text-align 被设置为 text-align 时的齐行方法。</p>
+
+        <p>该属性规定如何对齐行文本进行对齐和分隔。</p>
+      </li>
+      <li>
+        <p>text-outline 属性规定文本轮廓。</p>
+      </li>
+      <li>
+        <p>text-overflow 属性规定当文本溢出包含元素时发生的事情。</p>
+      </li>
+      <li>
+        <p>text-shadow 属性向文本设置阴影。</p>
+      </li>
+      <li>
+        <p>text-wrap 属性规定文本的换行（折行）规则。</p>
+      </li>
+      <li>
+        <p>word-break 属性规定自动换行的处理方法。</p>
+      </li>
+      <li>
+        <p>word-wrap 属性允许长单词或 URL 地址换行到下一行。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h2 id="转换属性">转换属性</h2>
+
+    <ul>
+      <li>
+        <p>transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。</p>
+      </li>
+      <li>
+        <p>transform-origin 属性允许您改变被转换元素的位置。</p>
+
+        <p>2D 转换元素能够改变元素 x 和 y 轴。3D 转换元素还能改变其 Z 轴。</p>
+
+        <p>为了更好地理解 transform-origin 属性，请查看这个<a href="https://www.w3school.com.cn/example/css3/demo_css3_transform-origin.html">演示</a>。</p>
+
+        <p>Safari/Chrome 用户：为了更好地理解 transform-origin 属性用于 3D 转换的情况，请查看这个<a href="https://www.w3school.com.cn/example/css3/demo_css3_transform-origin_3D.html">演示</a>。</p>
+      </li>
+      <li>
+        <p>transform-style 属性规定如何在 3D 空间中呈现被嵌套的元素。</p>
+      </li>
+      <li>
+        <p>perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。</p>
+
+        <p>当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。</p>
+      </li>
+      <li>
+        <p>perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴。该属性允许您改变 3D 元素的底部位置。</p>
+
+        <p>当为元素定义 perspective-origin 属性时，其子元素会获得透视效果，而不是元素本身。</p>
+      </li>
+      <li>
+        <p>backface-visibility 属性定义当元素不面向屏幕时是否可见。</p>
+
+        <p>如果在旋转元素不希望看到其背面时，该属性很有用。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="transition-属性">transition 属性</h1>
+
+    <ul>
+      <li>transition-property   规定设置过渡效果的 CSS 属性的名称。</li>
+      <li>transition-duration  规定完成过渡效果需要多少秒或毫秒。</li>
+      <li>transition-timing-function  规定速度效果的速度曲线。</li>
+      <li>transition-delay   定义过渡效果何时开始。</li>
+    </ul>
+  </li>
+</ul>
+
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2019/07/30/20190729%E6%97%A5%E5%BF%97/">20190729日志</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2019/07/30/HTML%E6%A0%87%E7%AD%BE/">HTML标签</a></p>
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2019/07/30/CSS%E6%A0%87%E7%AD%BE/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2019/07/30/CSS%E6%A0%87%E7%AD%BE/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//septemberqy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             人生如梦 
+        </p>
+        <p class="contact">
+            Contact me at:  
+            <a href="mailto:ryougiking@sina.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
