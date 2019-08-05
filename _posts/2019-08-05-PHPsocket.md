@@ -237,7 +237,7 @@ NO，服务器完全没有响应第二个客户端
 
 ```
 
-![ok](socket/serverall.png)
+![ok]({{/assets/serverall.png}})
 
 
 
