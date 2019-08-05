@@ -50,7 +50,7 @@ excerpt_separator: ~~~
 
 
 
-![]("/assets/socketserver1.png")
+![](/assets/socketserver1.png)
 
 
 
