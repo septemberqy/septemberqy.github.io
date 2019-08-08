@@ -1,0 +1,582 @@
+@mixin baseCss($w,$h)
+{
+	width:$w;
+	height:$h;
+}
+
+@mixin baseCssMin($w,$isMw,$h,$isMh)
+{
+	@if($isMw==1)
+	{
+		min-width:$w;
+	}
+	@if($isMw==0)
+	{
+		width:$w;
+	}
+	@if($isMh==1)
+	{
+		min-height:$h;
+	}
+	@if($isMh==0)
+	{
+		height:$h;
+	}
+}
+
+@mixin pos()
+{
+	position:absolute;
+}
+
+@mixin poslt($left,$top)
+{
+	@include pos();
+	left:$left;
+	top:$top;
+}
+
+@mixin posrt($right,$top)
+{
+	@include pos();
+	right:$right;
+	top:$top;
+}
+
+
+@mixin clear
+{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+@mixin fonttype($color,$size)
+{
+	color:$color;
+	font-size:$size;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	font: 14px/1.5 "PingFang SC", "微软雅黑", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
+ 	color: #1c1f21;
+
+}
+
+
+ul{
+	list-style: none;
+	padding-inline-start:0px;
+	margin:0px;
+}
+
+
+
+.header
+{
+	$headw :180px;
+	$headh : 72px;
+	@include baseCssMin(1284px,1,$headh,0);
+	box-shadow: 0px 4px 8px rgba(7,17,27,0.1);
+	&::after
+	{
+		@include clear;
+	};
+
+	.logo
+	{
+		@include baseCss($headw,$headh);
+		float:left;
+		display:inline-block; 
+		margin:0px 20px;
+		#logo{
+			@include baseCss($headw,$headh);
+		};
+	}
+
+	.headsearch
+	{
+		@include baseCss($headw,$headh);
+		display:block;
+		margin-left:5px;
+		float:left;
+
+		#search
+		{
+			width:140px;
+			border:{
+				top:none;
+				bottom:1px solid #D9DDE1;
+				left:none; 
+				right:none;
+			}
+			padding:12px 0px;
+			margin-top:20px;
+			&:focus
+			{
+				outline: none;
+				border-bottom:1px solid #F01414;
+			}
+		}
+
+		#searchbtn
+		{
+			float:right; 
+			@include baseCss(40px,24px);
+			padding:8px 0px;
+			background:url("../imgs/search.png") no-repeat center;
+			margin-top:19px;
+			border-bottom:1px solid #D9DDE1;
+		}
+
+
+	}
+
+	.loginarea
+	{	
+		@include baseCss(420px,$headh);
+		float:right;
+		position:relative;
+		li
+		{
+			float:left;
+			line-height: 74px;
+			font:{
+				size:14px;
+				family: "微软雅黑";
+			}
+			color: #71777D;
+			margin-left:20px;
+			&:first-child{margin-left:24px}
+			&:nth-of-type(2){margin-left:27px}
+			&:nth-of-type(4){margin-left:20px}
+			&:nth-of-type(5){margin-left:18px}
+
+			.gwc
+			{
+				@include baseCss(102px,34px);
+				border:1px solid #ccc;
+				margin-top:18px;
+				text-align: center;
+				line-height: 34px;
+				border-radius: 25px;
+				img
+				{
+					@include baseCss(12px,12px);
+					margin:{
+						right:10px;
+						top:11px;
+					}
+				}
+			}
+		}
+
+		.loginareaul
+		{
+			li 
+			{
+				.yqyj
+				{
+					@include baseCss(14px,16px);
+					background:{
+						size: 14px 16px; 
+						image:url("../imgs/hb.png");
+					}
+					@include poslt(2px,30px);
+				}
+				.loginColor
+				{
+					color:#4D555D;
+				}
+			}
+		}
+	}
+}
+
+.nav
+{
+	height:72px;
+	display:inline-block;
+	line-height: 72px;
+	margin-left:-40px;
+	float:left;
+}
+
+
+.nav_items{
+	list-style: none;
+	padding-inline-start:0px;
+	margin:0px;
+	li
+	{
+		float:left;
+		font-size:16px;
+		color:#4D555D;
+		padding:0px 10px;
+		position:relative;
+	}
+
+	.new
+	{
+		@include baseCss(16px,16px);
+		@include posrt(-6px,14px);
+		background-image: url("../imgs/new.png");
+	}
+
+}
+
+.fontcolor{
+	@include fonttype(rgba(0,160,80,0.6),16px);
+}
+
+.fontcolorw{
+	color:#fff;
+}
+
+.fontcolorb{
+	@include fonttype(#4D555D,16px);
+}
+
+.fontcolorc{
+	@include fonttype(#4D555D,14px);
+}
+
+.fontcolorr{
+	@include fonttype(red,14px);
+	font-weight:bold;
+}
+
+.banner{
+	@include baseCssMin(1284px,1,444px,0);
+	padding-top:32px;
+	.bannerbox
+	{
+		@include baseCss(1152px,444px);
+		margin:0px auto;
+		border-radius: 10px;
+		box-shadow: 0px 12px 24px rgba(0,7,17,0.2);
+		.bannerleft
+		{
+			float:left;
+			@include baseCss(204px,432px);
+			padding:{
+				top:12px;
+				left:12px;
+			}
+			background:#1C1F21;
+			border:{
+				top-left-radius: 8px;
+				bottom-left-radius: 8px;
+			}
+			position:relative;
+			.item
+			{
+				@include baseCss(174px,60px);
+				padding:0px 16px;
+				line-height: 60px;
+				&:hover
+				{
+					color:#fff;
+					background:rgba(255,255,255,0.3);
+					cursor:pointer;
+					border:
+					{
+						bottom-left-radius: 5px;
+						top-left-radius: 5px;
+					}
+				}
+
+				&:hover .hide1
+				{
+					display: block;
+					z-index:9;
+				}
+
+				.hide1
+				{
+
+					@include baseCss(768px,444px);
+					@include poslt(216px,0px);
+					background:#fff;
+					color:#000;
+					display:none;
+					z-index:3;
+					.hidetop
+					{
+						height:150px;
+						padding:12px 48px 32px;
+						.titleline
+						{
+							display:inline-block;
+							@include poslt(104px,18px);
+							@include baseCss(612px,1px);
+							margin:24px 0px;
+							background:#D9DDE1;
+						}
+						.hidecontentbox
+						{
+							@include baseCss(672px,76px);
+						}
+						.hidecontentbox
+						{
+							 ul
+							 {
+							 	margin:0px;
+							 	li
+							 	{
+							 		float:left;
+							 		margin:{
+							 			top:10px;
+							 			left:20px;
+							 		}
+							 		height:20px;
+									line-height: 20px;
+									color:#4D555D;
+								}
+							 }
+						}
+
+					}
+					.hidedown{
+						@include baseCss(720px,192px);
+						padding:{
+							left:48px;
+							top:36px;
+						}
+						margin-top:22px;
+						&::after
+						{
+							@include clear;
+						}
+						.hideles
+						{
+							@include baseCss(312px,60px);
+							float:left;
+							margin:
+							{
+								right:20px;
+								bottom:20px;
+							}
+							.hidelesleft
+							{
+								@include baseCss(60px,42px);
+								border-radius: 5px;
+							}
+							.hidelesright
+							{
+								@include baseCss(232px,42px);
+								float:right;
+								.hidelesrightup
+								{	
+									@include baseCss(232px,20px);
+									font-size:12px;
+									line-height:20px;
+								}
+								.hidelesrightdown
+								{
+									font-size:12px;
+									line-height:20px;
+									.hidelesprice
+									{
+										font-:12px;
+										font-weight: bold;
+										color:rgba(0,0,0,0.8);
+									}
+									.hideleslevel
+									{
+										font-:12px;
+										color:rgba(0,0,0,0.5);
+									}
+								}
+							}
+
+						}
+					}
+				}
+				.itemfont
+				{
+					font-size:14px;
+					color:rgba(255,255,255,0.6);
+				}
+			}
+		}
+		.bannerright
+		{
+			@include baseCss(936px,444px);
+			float:right;
+			border:{
+				top-right-radius: 5px;
+				bottom-right-radius: 5px;
+			}
+			.imgbox
+			{
+				position:relative;
+				.top
+				{
+					@include baseCss(936px,316px);
+					img
+					{
+						@include baseCss(936px,316px);
+						border-top-right-radius: 5px;
+					}
+				}
+				.chosebox
+				{
+					@include baseCss(100px,10px);
+					@include posrt(20px,280px);
+					display:inline-block;
+					position:absolute;
+				}
+				.chosebox
+				{
+					.chose
+					{
+						@include baseCss(8px,8px);
+						background:#000;
+						border:1px solid #fff;
+						float:left;
+						margin-right:6px;
+						border-radius: 50%;
+					}
+				}
+			}
+			.bottom
+			{
+				@include baseCss(936px,128px);
+				.new-path
+				{
+					@include baseCss(68px,68px);
+					background:url(../imgs/new-path.png);
+					position:absolute;
+					z-index:1;
+				}
+				.bottombox
+				{
+					@include baseCss(902px,128px);
+					padding:0px 17px;
+					display:flex;
+					.path-banner
+					{
+						@include baseCss(180px,128px);
+						background:#fff;
+						z-index:0;
+						cursor:pointer;
+						&:hover .i-web
+						{
+							transform: translateY(-5px);
+						}
+						&:hover .tit
+						{
+							transform: translateY(-5px);
+						}
+						&:hover .desc
+						{
+							transform: translateY(-5px);
+						}
+					}
+					.i-web
+					{
+						@include baseCss(36px,36px);
+						display:block;
+						background-size:36px 36px;
+						margin:22px auto 0px;
+						background:url(../imgs/path-2019.png) no-repeat 0px 0px/100%;
+						transition:all 0.3s;
+					}
+					.tit
+					{
+						text-align: center;
+						margin:0px;
+						font-size:14px;
+						margin-top:3px;
+						letter-spacing: 1px;
+						transition:all 0.3s;
+					}
+					.desc
+					{
+						text-align:center;
+						font-size:12px;
+						margin:0px;
+						color:#9c999F;
+						margin-top:3px;
+						transition:all 0.3s;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin baseFontBox
+{
+	display:inline;
+	float:left;
+}
+
+@mixin myFontBox($w,$h)
+{
+	@include baseFontBox;
+	width:$w;
+	height:$h;
+	
+}
+
+
+.contentbox
+{
+	width:100%;
+	min-width:1284px;
+	.content
+	{
+		width:1152px;
+		padding:
+		{
+			top:36px;
+			bottom:48px;
+			left:0px;
+			right:0px;
+		}
+		margin:0px auto;
+		display:block;
+		.typeTitle
+		{
+			height:38px;
+			text-align: center;
+			.fontbox
+			{
+				@include myFontBox(160px,36px);
+			}
+			.fontbox2
+			{
+				@include myFontBox(300px,36px);
+			}
+			.fontbox3
+			{
+				@include myFontBox(270px,36px);
+			}
+			em
+			{
+				font:
+				{
+					size:20px;
+					weight: 600;
+					style:normal;
+				}
+				color:#4D555D;
+				margin:0px 3px;
+				display:inline-block;
+			}
+			.w
+			{
+				@extends em;
+				color:#FFF;
+			}
+		}
+	}
+	&:nth-child(2n)
+	{
+		background:#F8FAFC;
+	}
+}
