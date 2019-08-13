@@ -11,7 +11,7 @@ ul {
   margin: 0px; }
 
 .header {
-  min-width: 1284px;
+  min-width: 1200px;
   height: 72px;
   box-shadow: 0px 4px 8px rgba(7, 17, 27, 0.1); }
   .header::after {
@@ -142,7 +142,7 @@ ul {
   font-weight: bold; }
 
 .banner {
-  min-width: 1284px;
+  width: 100%;
   height: 444px;
   padding-top: 32px; }
   .banner .bannerbox {
@@ -209,6 +209,8 @@ ul {
                 height: 20px;
                 line-height: 20px;
                 color: #4D555D; }
+                .banner .bannerbox .bannerleft .item .hide1 .hidetop .hidecontentbox ul li:hover {
+                  color: skyblue; }
           .banner .bannerbox .bannerleft .item .hide1 .hidedown {
             width: 720px;
             height: 192px;
@@ -249,9 +251,10 @@ ul {
                     font-: 12px;
                     color: rgba(0, 0, 0, 0.5); }
         .banner .bannerbox .bannerleft .item .itemfont {
-          font-size: 14px;
-          color: #FF34B3;
-          opacity: 0.6; }
+          font-size: 16px;
+          color: #05ffdc;
+          opacity: 0.6;
+          font-family: unset; }
     .banner .bannerbox .bannerright {
       width: 936px;
       height: 444px;
@@ -353,7 +356,7 @@ ul {
 
 .contentbox {
   width: 100%;
-  min-width: 1284px; }
+  min-width: 1200px; }
   .contentbox .content {
     width: 1152px;
     padding-top: 36px;
@@ -423,7 +426,10 @@ ul {
         float: left;
         position: relative; }
         .contentbox .content .lesson .lessonbox:hover .lestitle {
-          color: red;
+          color: skyblue;
+          transition: all 0.3s; }
+        .contentbox .content .lesson .lessonbox:hover img {
+          transform: scale(1.05, 1.05);
           transition: all 0.3s; }
         .contentbox .content .lesson .lessonbox:hover {
           cursor: pointer; }

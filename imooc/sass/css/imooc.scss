@@ -6,6 +6,9 @@
 
 $bannerBgColor:#8805A8;
 $bannerFontColor:#05ffdc;
+$lesstitleColor:skyblue;
+$fontss:unset;
+
 
 @mixin baseCssMin($w,$isMw,$h,$isMh)
 {
@@ -80,7 +83,7 @@ ul{
 {
 	$headw :180px;
 	$headh : 72px;
-	@include baseCssMin(1284px,1,$headh,0);
+	@include baseCssMin(1200px,1,$headh,0);
 	box-shadow: 0px 4px 8px rgba(7,17,27,0.1);
 	&::after
 	{
@@ -251,7 +254,7 @@ ul{
 }
 
 .banner{
-	@include baseCssMin(1284px,1,444px,0);
+	@include baseCssMin(100%,0,444px,0);
 	padding-top:32px;
 	.bannerbox
 	{
@@ -337,6 +340,11 @@ ul{
 							 		height:20px;
 									line-height: 20px;
 									color:#4D555D;
+
+									&:hover 
+									{
+										color:$lesstitleColor;
+									}
 								}
 							 }
 						}
@@ -400,9 +408,10 @@ ul{
 				}
 				.itemfont
 				{
-					font-size:14px;
+					font-size:16px;
 					color:$bannerFontColor;
 					opacity:0.6;
+					font-family:$fontss;
 				}
 			}
 		}
@@ -574,7 +583,7 @@ ul{
 .contentbox
 {
 	width:100%;
-	min-width:1284px;
+	min-width:1200px;
 	.content
 	{
 		width:1152px;
@@ -663,7 +672,12 @@ ul{
 
 		 		&:hover .lestitle
 		 		{
-		 			color:red;
+		 			color:$lesstitleColor;
+		 			transition:all 0.3s;
+		 		}
+		 		&:hover img
+		 		{
+		 			transform:scale(1.05,1.05);
 		 			transition:all 0.3s;
 		 		}
 		 		&:hover

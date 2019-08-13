@@ -4,6 +4,12 @@
 	height:$h;
 }
 
+$bannerBgColor:#8805A8;
+$bannerFontColor:#05ffdc;
+$lesstitleColor:skyblue;
+$fontss:unset;
+
+
 @mixin baseCssMin($w,$isMw,$h,$isMh)
 {
 	@if($isMw==1)
@@ -264,7 +270,8 @@ ul{
 				top:12px;
 				left:12px;
 			}
-			background:#1C1F21;
+			//background:#1C1F21;
+			background:$bannerBgColor;
 			border:{
 				top-left-radius: 8px;
 				bottom-left-radius: 8px;
@@ -333,6 +340,11 @@ ul{
 							 		height:20px;
 									line-height: 20px;
 									color:#4D555D;
+
+									&:hover 
+									{
+										color:$lesstitleColor;
+									}
 								}
 							 }
 						}
@@ -396,8 +408,10 @@ ul{
 				}
 				.itemfont
 				{
-					font-size:14px;
-					color:rgba(255,255,255,0.6);
+					font-size:16px;
+					color:$bannerFontColor;
+					opacity:0.6;
+					font-family:$fontss;
 				}
 			}
 		}
@@ -569,7 +583,7 @@ ul{
 .contentbox
 {
 	width:100%;
-	min-width:1284px;
+	min-width:1200px;
 	.content
 	{
 		width:1152px;
@@ -658,7 +672,12 @@ ul{
 
 		 		&:hover .lestitle
 		 		{
-		 			color:red;
+		 			color:$lesstitleColor;
+		 			transition:all 0.3s;
+		 		}
+		 		&:hover img
+		 		{
+		 			transform:scale(1.05,1.05);
 		 			transition:all 0.3s;
 		 		}
 		 		&:hover
@@ -1034,50 +1053,454 @@ ul{
 			}
 
 		}
+		.teastarbox
+		{
+			@include baseCss(1152px,298px);
+			margin-top:38px;
+
+			.startop
+			{
+				@include baseCss(544px,136px);
+				padding:0px 304px;
+
+				.staritem
+				{
+					@include baseCss(136px,98px);
+					float:left;
+					position:relative;
+				}
+				.headimg
+				{
+					@include baseCss(56px,56px);
+					margin:0px auto;
+					display:block;
+					border-radius: 50%;
+				}
+				.starname
+				{
+					width:136px;
+					color:#07111D;
+					margin-top:8px;
+					text-align: center;
+				}
+				.stardesc
+				{
+					width:136px;
+					text-align:center;
+					color:#93999F;
+					font-size:12px;
+				}
+
+				.champion
+				{
+					@include baseCss(26px,18px);
+					background:url("../imgs/champion.png") no-repeat;
+					background-size:100%;
+					display:inline-block;
+					@include poslt(54px,-18px);
+				}
+				
+			}
+			.starbottom
+			{
+				@include baseCss(896px,152px);
+				padding:0px 132px;
+				
+				.outborder
+				{
+					@include baseCss(52px,52px);
+					border:2px solid #fff;
+					border-radius: 50%;
+					position:relative;
+					transition:all 0.3s ;
+
+					&:hover
+					{
+						border-color: #008CC8;
+					}
+					&:hover .squ
+					{
+						display:block;
+					}
+					&:hover  .starcontent
+					{
+						display:block;
+					}
+
+					.stardown
+					{
+						width:48px;height:48px;
+						border:2px solid #fff;
+						border-radius: 50%;
+						&:hover + .starcontent .squ
+						{
+							opacity: 1;
+						}
+						&:hover + .starcontent
+						{
+							opacity: 1;
+						}
+
+					}
+					.squ{
+						@include baseCss(20px,20px);
+						transform:rotate(45deg);
+						@include poslt(86px,78px);
+						opacity: 0;
+						transition: 0.3s all;
+						display:none;
+					}
+					.starcontent
+					{
+						@include baseCss(154px,77px);
+						padding:13px 24px 0px;
+						border-radius: 8px;
+						@include poslt(-71px,-106px);
+						opacity: 0;
+						transition: 0.3s all;
+						display:none;
+
+						.startitle
+						{
+							display:block;
+							text-align: center;
+							font-size:12px;
+						}
+						.starname
+						{
+							@extend .startitle;
+							
+							font-size:14px;
+						}
+						.weekdaly
+						{
+							@extend .startitle;
+							margin-top:10px;
+						}
+					}
+				}
+			}
+		}
+
 	}
 	&:nth-child(2n)
 	{
 		background:#F8FAFC;
 	}
 
-	.backgd
+	.footer
 	{
-		background:url("../imgs/back.jpg") no-repeat center center;
-		background-size: cover;
-		height:408px;
-		overflow: hidden;
-
-		.content
+		@include baseCss(1284px,60px);
+		padding:36px 0px;
+		.footerbox
 		{
-			.typeTitle
+			@include baseCss(1152px,28px);
+			margin:0px auto;
+			span
 			{
-				.moreteach
+				font-size:14px;
+				color:#99A1A6;
+				line-height: 14px;
+				@include baseCss(56px,28px);
+				margin:0px 10px;
+			}
+			.footfont
+			{
+				font-size:14px;
+				color:#99A1A6;
+				line-height: 14px;
+				text-decoration:none;
+				&:hover
 				{
-					float:right;
-					padding-top: 5px;
-
-					.fontmore
-					{
-						color:#fff;
-						text-decoration:none;
-						font-size:12px;
-						opacity: 0.5;
-						transition:0.3s all;
-
-						&:hover
-						{
-							opacity: 1;
-						}
-					}
-
+					color:#000;
 				}
+			}
+
+		}
+		.footbotbox
+		{
+			@include baseCss(1152px,24px);
+			margin:0px auto;
+			span
+			{
+				font-size:12px;
+				color:#99A1A6;
+				line-height: 14px;
+				margin:0px 10px;
+			}
+		}
+		.rightbox
+		{
+			@include baseCss(142px,60px);
+			float:right;
+			.wx
+			{
+				@include baseCss(60px,60px);
+				margin-right:22px;
+				float:left;
+
+				span
+				{
+					font-size:12px;
+					margin-top:5px;
+					display:block;
+				}
+			}
+			.wximg
+			{
+				background:url(../imgs/idx-btm.png) no-repeat center;
+				background-position: -52px -220px;
+				@include baseCss(32px,32px);
+				margin:0px auto;
+			}
+			.wb
+			{
+				@include baseCss(60px,60x);
+				float:left;
+				span
+				{
+					font-size:12px;
+					margin-top:5px;
+					display:block;
+				}
+			}
+			.wbimg
+			{
+				background:url(../imgs/idx-btm.png) no-repeat center;
+				background-position: 0px -220px;
+				@include baseCss(32px,32px);
+				margin:0px auto;
 			}
 		}
 	}
 
-}
 
+
+	
+
+	.pos1
+	{
+		position:absolute;
+	}
+
+	.pos2
+	{
+		position:absolute;
+	}
+}
+.backgd
+{
+	background:url("../imgs/back.jpg") no-repeat center center;
+	background-size: cover;
+	height:408px;
+	overflow: hidden;
+
+	.content
+	{
+		width:1152px;
+		padding:
+		{
+			top:36px;
+			bottom:48px;
+			left:0px;
+			right:0px;
+		}
+		margin:0px auto;
+		display:block;
+		.typeTitle
+		{
+			height:38px;
+			text-align: center;
+			.moreteach
+			{
+				float:right;
+				padding-top: 5px;
+
+				.fontmore
+				{
+					color:#fff;
+					text-decoration:none;
+					font-size:12px;
+					opacity: 0.5;
+					transition:0.3s all;
+
+					&:hover
+					{
+						opacity: 1;
+					}
+				}
+
+			}
+			.iconl
+			{
+				@include baseCss(56px,36px);
+				display:inline-block;
+				background:url("../imgs/icon.png") 0px 0px /100%;
+			}
+			.posl
+			{
+				@include contentPos(25px,419px);
+			}
+			.posl2
+			{
+				@include contentPos(25px,355px);
+			}
+			.iconr
+			{
+				@include baseCss(56px,36px);
+				display:inline-block;
+				background:url("../imgs/icon.png") 0px -36px /100%;
+			}
+			.posr
+			{
+				margin-left:25px;
+				float:left;
+			}
+			.fontbox3
+			{
+				@include myFontBox(270px,36px);
+				em
+				{
+					font:
+					{
+						size:20px;
+						weight: 600;
+						style:normal;
+					}
+					color:#4D555D;
+					margin:0px 3px;
+					display:inline-block;
+				}
+				.w
+				{
+					font:
+					{
+						size:20px;
+						weight: 600;
+						style:normal;
+					}
+					color:#FFF;
+					margin:0px 3px;
+					display:inline-block;
+				}
+
+			}
+		}
+		.teachbox
+	{
+		@include baseCss(1186px,248px);
+		margin:44px auto 0px;
+
+		.teaitem
+		{
+			display:block;
+			border-radius: 10px;
+			@include baseCss(216px,248px);
+			margin-right:18px;
+			background:rgba(255,255,255,0.8);
+			position:relative;
+			float:left;
+
+			&:hover .teahead
+			{
+				margin-left:-28px;
+			}
+
+			&:hover .teahead
+			{
+				@include baseCss(56px,56px);
+				transition:0.3s all;
+			}
+
+			&:hover .teaname
+			{
+				opacity: 0;
+			}
+
+			&:hover .teajob
+			{
+				opacity: 0;
+			}
+
+			&:hover .teacontent
+			{
+				height:145px;
+				overflow: hidden;
+				transform:translateY(-90px);
+				transition: 0.3s all;
+			}
+
+			.teahead
+			{
+				@include baseCss(96px,96px);
+				border-radius: 50%;
+				position:absolute;
+				left:50%;
+				top:-16.6px;
+				margin-left:-48px;
+			}
+			.teaname
+			{
+				display:block;
+				text-align: center; 
+				width:216px; font-size:16px;
+				color:#000;
+				font-weight:bold;
+				margin:92px auto 0px;
+			}
+			.teajob
+			{
+				display:block;
+				text-align: center; 
+				width:216px;
+				font-size:12px;
+				color:#4D555D;
+				font-weight:bold;
+				margin:3px auto 0px;
+				margin-bottom:12px;
+			}
+			.teacontent
+			{
+				display:block;
+				@include baseCss(144px,72px);
+				padding:0px 36px;
+				font-size:12px;
+				color:#4D555D;
+				line-height: 24px;
+				overflow: hidden;
+			}
+
+
+
+		}
+	}
+	}
+}
 .contentcolor
 {
 	color:#4D555D;
 }
+dd
+{
+	margin:0px;
+	float:left;
+}
+
+.marginright48{
+	margin-right:28px;
+	margin-bottom: 24px;
+
+}
+
+.marginleft40{
+	margin-left:40px;
+}
+
+.colorblue{
+	background-color:#008CC8;
+}
+
+.pos1{position:absolute;}
+
+.pos2{position:absolute;}
+
