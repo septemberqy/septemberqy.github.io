@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="./css/cssreset.css">
+	<link rel="stylesheet" href="./css/style.css" media="screen">
+	<link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="top">
+				<div class="left">
+					山西罗亚摄影
+				</div>
+				<div class="right">
+					<ul>
+						<li><i class="fa fa-home">首页</i></li>
+						<li><i class="fa fa-info">关于</i></li>
+						<li><i class="fa fa-laptop">服务</i></li>
+						<li><i class="fa fa-camera">案例</i></li>
+						<li><i class="fa fa-envelope">联系</i></li>
+					</ul>
+					<i class="bar fa fa-bars"></i>
+				</div>
+			</div>
+			<div class="banner">
+				<div class="imgbak"></div>
+			</div>
+		</header>
+		<div class="main">
+			<div class="aboutus">
+				<p>About Us</p>
+				<p>罗亚摄影对自己的定义是摄影业界的独立视觉设计品牌,这标志着允许我们的奇思妙想具备很强的技术前沿性</p>
+				<p>甚至每年罗亚摄影研发部门神经中枢会有10%的创作完全不针对客片市场,只是表达对信念和理想的坚持</p>
+			</div>
+			<div class="ourservice">
+				<p class="t">
+					Our Service
+				</p>
+				<div class="ourservicebox">
+					<div class="service">
+						<i class="fa fa-camera-retro servicefont" aria-hidden="true"></i>
+						<p class="st">个人写真</p>
+						<p class="content">罗亚摄影为您量身打造写真风格,金牌团队,金牌服务,幸福不容错过.个人写真风格让你倾听内心的声音,遇见真是的自己</p>
+					</div>
+					<div class="service">
+						<i class="fa fa-camera servicefont" aria-hidden="true"></i>
+						<p class="st">旅游风采</p>
+						<p class="content">中国最美滩涂——福建霞浦-杨家溪古榕树-南溪江渔火,中国非常美丽的滩涂和海湾,摄影师的创作天堂</p>
+					</div>
+					<div class="service">
+						<i class="fa fa-globe servicefont" aria-hidden="true"></i>
+						<p class="st">婚纱旅拍</p>
+						<p class="content">罗亚摄影为您提供多条经典旅拍线路,专属套系,多样风格任您选,明星服装任您穿,与约首席摄影师,首席化妆造型师任您选</p>
+					</div>
+				</div>
+			</div>
+			<div class="ourwork">
+				<p class="ot">Our Work</p>
+				<div class="tag">
+					<button>ALL</button>
+					<button>旅游采风</button>
+					<button>个人写真</button>
+					<button>婚纱旅拍</button>
+				</div>
+				<div class="picbox">
+					<div class="imgbox">
+						<img src="./img/portrait1-sm.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/portrait2.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/nature1.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/portrait3.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/portrait5.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/nature.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/portrait4.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/forest.jpg">
+					</div>
+					<div class="imgbox">
+						<img src="./img/bw1.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="contactus">
+				<div class="ct">
+					Contect Us
+				</div>
+				<div class="info">
+					<label>您的姓名</label>
+					<input type="text" placeholder="输入您的姓名"><br>
+					<label>您的邮箱</label>
+					<input type="text" placeholder="输入您的邮箱"><br>
+					<label>您的需求</label>
+					<input type="text" placeholder="输入您的需求"><br>
+					<label >您的联系方式</label>
+					<textarea rows="30" cols="20" placeholder="输入您的联系方式"></textarea><br>
+					<button class="sub">提交</button><button class="can">取消</button>
+				</div>
+				
+			</div>
+		</div>
+		<footer>
+			<p class="ft">版权所有:山西罗亚摄影有限公司</p>
+			<p class="dz">地址:山西省太原市迎泽区柳南路17号</p>
+		</footer>
+	</div>
+</body>
+<script>
+	var num=0;
+	$(document).ready(function(){
+		$(".bar").click(function(){
+			if(num%2==0){
+				$(".right").find("ul").fadeIn();
+			}
+			else{
+				$(".right").find("ul").fadeOut(function(){
+					$(".right").find("ul").removeAttr("style");
+				});
+			}
+			num++;
+
+		})
+	});
+</script>
+</html>
